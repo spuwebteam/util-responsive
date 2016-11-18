@@ -1,0 +1,581 @@
+@font-face {
+    font-family: 'aleoregular';
+    src: url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.eot?#iefix') format("embedded-opentype"),url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.woff') format("woff"),url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.ttf') format("truetype"),url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.svg#aleobold') format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+#overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .75);
+    z-index: 999;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+#govHeader {
+    color: #fff;
+    background-color: #003da5;
+    padding: .75em;
+    a {
+        color: #fff;
+    }
+    #search {
+        text-align: right;
+        i {
+            font-size: 1.5em;
+            margin-top: .25em;
+        }
+    }
+    #govLink {
+        font-size: 1.5em;
+        padding-left: 5px;
+    }
+}
+
+#deptHeader {
+    background-image: url('../img/back_sm.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: .75em;
+    h1 {
+        font-weight: 700;
+        font-family: 'Seattle Text', 'Open Sans', 'Arial';
+    }
+    h3 {
+        color: #fff;
+        margin-top: 5px;
+        font-family: 'Seattle Text', 'Open Sans', 'Arial';
+    }
+    #navIcons {
+        font-size: 2em;
+        color: #fff;
+    }
+    .fa-home {
+        color: #fff;
+        font-size: 2.5em;
+    }
+    #inlineSearch {
+        margin: .5em 0 1em 0;
+        input[type=text] {
+            height: 3.25em;
+            border: 1px solid #666;
+        }
+        #searchButton {
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 0;
+            background-color: #666;
+            color: #fff;
+            border-color: #666;
+            height: 3.25em;
+            width: 3.25em;
+            &:hover {
+                background-color: #090909;
+                border-color: #090909;
+            }
+        }
+        .fa-search {
+            color: #fff;
+            font-size: 1.75em;
+            margin: -1px 0 0 -5px;
+        }
+    }
+}
+
+#navIcosvg {
+    color: #fff;
+}
+
+#main {
+    #nav-xs {
+        margin-top: 1em;
+        li {
+            background-color: #d5dfe3;
+            + li {
+                margin-top: 4px;
+            }
+        }
+        a {
+            color: #000;
+            padding: 15px;
+        }
+        ul + ul {
+            margin-top: 4px;
+        }
+    }
+    #alert #redbox {
+        padding: 1.5em;
+        margin-top: 1em;
+        border: 2px solid #e6002e;
+        background-color: #fff;
+    }
+}
+
+#promo {
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .item {
+        margin-top: 3em;
+        h4 {
+            font-size: 125%;
+        }
+    }
+    h4 {
+        color: #4585f2;
+    }
+    a {
+        &:hover {
+            text-decoration: none;
+            opacity: .85;
+        }
+        > p {
+            color: #000;
+        }
+    }
+}
+
+#footer {
+    margin-top: 1.5em;
+    background-color: #686868;
+    width: 100%;
+    border-top: .25em solid #c8c8c8;
+    line-height: 1.75em;
+    font-size: 125%;
+    h4 {
+        color: #e2e2e2;
+        font-weight: 700;
+    }
+    h5 {
+        color: #fff;
+        font-size: 1.15em;
+        margin-top: 0;
+    }
+    a {
+        color: #fff;
+        padding: .3em 0;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 2em 0;
+        padding: 0;
+        line-height: 2em;
+    }
+    li {
+        border-bottom: 1px solid #8e8e8e;
+        a {
+            display: block;
+            padding-left: 1em;
+        }
+    }
+    #address {
+        color: #e2e2e2;
+        line-height: 1.5em;
+        margin-left: -15px;
+    }
+    #branding img {
+        margin-bottom: 1em;
+    }
+    #socialMedia p {
+        margin-bottom: 1em;
+    }
+}
+
+@media(min-width: 544px) {
+    #main #nav-xs {
+        a {
+            color: #000;
+            padding: 15px 8px;
+        }
+        ul {
+            float: left;
+            width: 49%;
+            + ul {
+                margin-top: 0;
+                margin-left: 4px;
+            }
+        }
+    }
+    #promo .item {
+        width: 33%;
+        float: left;
+    }
+}
+
+@media(min-width:768px) {
+    #deptHeader {
+        background: none;
+    }
+    #main {
+        background-image: url('../img/CedarRiverWatershed_Panorama.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 33.7em;
+        width: 100%;
+        position: relative;
+        #ebill {
+            position: absolute;
+            bottom: 8em;
+            color: #fff;
+            a {
+                color: #fff;
+            }
+            > div {
+                padding: 1.5em;
+            }
+            #signup {
+                color: #fff;
+                background-color: #4585f2;
+                h1 {
+                    font-family: 'aleoregular', 'Open Sans', 'sans-serif';
+                }
+                h2 {
+                    font-family: 'aleoregular', 'Open Sans', 'sans-serif';
+                }
+            }
+        }
+        #alert {
+            position: absolute;
+            bottom: 8em;
+            padding: 0;
+            margin-left: 15px;
+            margin-bottom: -1.5em;
+            #signup {
+                width: 50%;
+                color: #fff;
+                float: left;
+                font-size: 1em;
+                padding: 1.2em 1em;
+                margin-top: 2em;
+                background-color: #4585f2;
+                padding: 1.2em;
+                a {
+                    display: block;
+                    color: #fff;
+                    font-size: 1.2em;
+                }
+            }
+            #pay {
+                width: 50%;
+                color: #fff;
+                float: left;
+                font-size: 1em;
+                padding: 1.2em 1em;
+                margin-top: 2em;
+            }
+            p {
+                margin-bottom: 1.5em;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+        #pay {
+            color: #fff;
+            background-color: #025cf6;
+            a {
+                display: block;
+                color: #fff;
+                font-size: 1.2em;
+            }
+            &:hover {
+                background-color: #0152dd;
+            }
+        }
+    }
+    #footer li {
+        border: none;
+    }
+}
+
+@media(min-width: 992px) {
+}
+
+@media(min-width: 1200px) {
+    #govHeader {
+        background-color: #003da5;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
+    #utilNav {
+        position: relative;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-right: -1.07em;
+        }
+        li {
+            float: left;
+            margin-right: .75em;
+            padding: .5em;
+        }
+        a {
+            color: #737373;
+        }
+    }
+    #deptHeader {
+        position: relative;
+        margin-top: 7em;
+        h1 {
+            margin-top: -.2em;
+            margin-bottom: -.3em;
+        }
+        h4 {
+            color: #999;
+        }
+        > div {
+            position: relative;
+        }
+        #primaryNav {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding-right: 0;
+            ul {
+                list-style: none;
+                margin-bottom: 0;
+            }
+            li {
+                float: left;
+                border-left: .1em solid #c2c2c2;
+                width: 10.857em;
+                padding: 0 .75em .25em 1em;
+                font-weight: 700;
+            }
+            a {
+                color: #000;
+                display: block;
+                text-decoration: none;
+            }
+            > ul > li {
+                &:last-child {
+                    width: 10em;
+                    padding-right: 0;
+                }
+                &:nth-child(1) {
+                    width: 7.14em;
+                    height: 2.85em;
+                    padding-bottom: 3.15em;
+                }
+            }
+        }
+    }
+    #footer {
+        margin-top: 6em;
+        font-size: 100%;
+        ul {
+            margin-top: 0;
+        }
+        #address {
+            margin-left: 0;
+        }
+        #socialMedia {
+            margin-top: 14em;
+        }
+        li a {
+            padding-left: 0;
+        }
+    }
+    #main #navbar {
+        z-index: 999;
+        position: absolute;
+        bottom: 0;
+        margin-left: 15px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            float: left;
+        }
+        a {
+            display: block;
+            padding: .75em 1em;
+        }
+        #services {
+            float: left;
+            background-color: #191919;
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+            li {
+                margin-right: .75em;
+            }
+            > li {
+                &:nth-child(5) {
+                    width: 6.857em;
+                }
+                &:nth-child(6) {
+                    margin-right: 2em;
+                }
+            }
+        }
+        #trans {
+            float: left;
+            li {
+                background-color: #e6002e;
+                border-right: .143em solid #000;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+            #navAcct {
+                width: 12.28em;
+                position: relative;
+                .dropdown-menu {
+                    margin: 0;
+                    padding: 0;
+                    //Instead of the line below you could use @include column-count($count)
+                    column-count: 2;
+                    //Instead of the line below you could use @include column-gap($width)
+                    column-gap: 1px;
+                }
+            }
+            #navReport {
+                width: 7em;
+                position: relative;
+            }
+            #navRid {
+                width: 9em;
+            }
+            #navPick {
+                width: 8em;
+                border-right: none;
+            }
+            #acctDrop {
+                position: absolute;
+            }
+            #reportDrop {
+                position: absolute;
+            }
+            .dropdown-menu {
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 0;
+                border-top: none;
+                li {
+                    clear: both;
+                    width: 100%;
+                    border: none;
+                }
+                > li > a {
+                    color: #000;
+                    &:hover {
+                        background-color: #cc0000;
+                        color: #000;
+                    }
+                }
+            }
+            > .open {
+                background-color: #fff;
+                a {
+                    color: #000;
+                }
+                > ul > li {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    #promo .item {
+        margin-top: 2.25em;
+    }
+}
+
+#hamNavCont {
+    display: none;
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#hamNav {
+    font-size: 1.5em;
+    line-height: 3em;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 1.5em;
+    list-style: none;
+    background-color: rgba(0,108,146,1);
+    ul {
+        list-style: none;
+        background-color: rgba(0,108,146,1);
+    }
+    > li {
+        > a {
+            text-transform: capitalize;
+            margin: 0 1em;
+            > i {
+                margin-top: 1em;
+            }
+        }
+        + li {
+            border-top: 1px solid rgba(255,255,255,0.25);
+        }
+        > ul {
+            display: none;
+            background-color: rgba(0,52,89,0.75);
+            line-height: 2em;
+        }
+    }
+    .dismiss {
+        margin: 1em;
+        border-top: none;
+        i {
+            position: absolute;
+            top: -.3em;
+            right: 1.1em;
+        }
+    }
+    a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+    }
+}
+
+// Kludges for seattle.gov header
+#seaGovHeader {
+    .container {
+        max-width: 1170px !important;
+    }
+    #hamNavbar-fixed-top {
+        position: static !important;
+    }
+}
+
+a#skipnav {
+    position: absolute;
+    left: -999em;
+    top: auto;
+    overflow: hidden;
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+}
+
+#searchModal .modal-backdrop {
+    z-index: 0 !important;
+}
