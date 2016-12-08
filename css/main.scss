@@ -62,14 +62,13 @@
         color: #fff;
         font-size: 2.5em;
     }
-    #inlineSearch {
+    #q {
         margin: .5em 0 1em 0;
         input[type=text] {
             height: 3.25em;
             border: 1px solid #666;
         }
         #searchButton {
-            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
             border-radius: 0;
             background-color: #666;
             color: #fff;
@@ -192,6 +191,62 @@
     }
 }
 
+#hamNavCont {
+    display: none;
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#hamNav {
+    font-size: 1.5em;
+    line-height: 3em;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 1.5em;
+    list-style: none;
+    background-color: rgba(0,108,146,1);
+    ul {
+        list-style: none;
+        background-color: rgba(0,108,146,1);
+    }
+    > li {
+        > a {
+            text-transform: capitalize;
+            margin: 0 1em;
+            > i {
+                margin-top: 1em;
+            }
+        }
+        + li {
+            border-top: 1px solid rgba(255,255,255,0.25);
+        }
+        > ul {
+            display: none;
+            background-color: rgba(0,52,89,0.75);
+            line-height: 2em;
+        }
+    }
+    .dismiss {
+        margin: 1em;
+        border-top: none;
+        i {
+            position: absolute;
+            top: -.3em;
+            right: 1.1em;
+        }
+    }
+    a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+    }
+}
+
 @media(min-width: 544px) {
     #main #nav-xs {
         a {
@@ -215,7 +270,54 @@
 
 @media(min-width:768px) {
     #deptHeader {
-        background: none;
+        background-image: none;
+        position: relative;
+        margin-top: 1em;
+        h1 {
+            margin-top: -.2em;
+            margin-bottom: -.3em;
+        }
+        h4 {
+            color: #999;
+        }
+        > div {
+            position: relative;
+        }
+        #director {
+            margin-left: 15px;
+        }
+        #primaryNav {
+            margin-left: -3em;
+            margin-top: 1.5em;
+            ul {
+                list-style: none;
+                margin-bottom: 0;
+            }
+            li {
+                float: left;
+                width: 10.857em;
+                padding: 0 .75em .25em 1em;
+                font-weight: 700;
+                border-left: .1em solid #c2c2c2;
+            }
+            a {
+                color: #000;
+                display: block;
+                text-decoration: none;
+            }
+            > ul > li {
+                &:last-child {
+                    width: 10em;
+                    padding-right: 0;
+                }
+                &:nth-child(1) {
+                    width: 7.14em;
+                    height: 2.85em;
+                    padding-bottom: 3.15em;
+                    border: none;
+                }
+            }
+        }
     }
     #main {
         background-image: url('../img/CedarRiverWatershed_Panorama.jpg');
@@ -226,7 +328,7 @@
         position: relative;
         #ebill {
             position: absolute;
-            bottom: 8em;
+            bottom: 11em;
             color: #fff;
             a {
                 color: #fff;
@@ -293,6 +395,105 @@
                 background-color: #0152dd;
             }
         }
+        #navbar {
+            z-index: 999;
+            position: absolute;
+            bottom: 0;
+            margin-left: 15px;
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            li {
+                float: left;
+            }
+            a {
+                display: block;
+                padding: .75em 1em;
+            }
+            #services {
+                float: left;
+                background-color: #191919;
+                margin: 1em 0;
+                width: 100%;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+                > li {
+                    &:nth-child(5) {
+                        width: 6.857em;
+                    }
+                    &:nth-child(6) {
+                        margin-right: 2em;
+                    }
+                }
+            }
+            #trans {
+                float: left;
+                li {
+                    background-color: #e6002e;
+                    border-right: .143em solid #000;
+                }
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+                #navAcct {
+                    width: 12.28em;
+                    position: relative;
+                    .dropdown-menu {
+                        margin: 0;
+                        padding: 0;
+                        column-count: 2;
+                        column-gap: 1px;
+                    }
+                }
+                #navReport {
+                    width: 7em;
+                    position: relative;
+                }
+                #navRid {
+                    width: 9.3em;
+                }
+                #navPick {
+                    width: 9em;
+                    border-right: none;
+                }
+                #acctDrop {
+                    position: absolute;
+                }
+                #reportDrop {
+                    position: absolute;
+                }
+                .dropdown-menu {
+                    border-radius: 0;
+                    border-top: none;
+                    li {
+                        clear: both;
+                        width: 100%;
+                        border: none;
+                    }
+                    > li > a {
+                        color: #000;
+                        &:hover {
+                            background-color: #cc0000;
+                            color: #000;
+                        }
+                    }
+                }
+                > .open {
+                    background-color: #fff;
+                    a {
+                        color: #000;
+                    }
+                    > ul > li {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
     }
     #footer li {
         border: none;
@@ -300,6 +501,12 @@
 }
 
 @media(min-width: 992px) {
+    #deptHeader {
+        #primaryNav {
+            float: right;
+            margin-top: -3em;
+        }
+    }
 }
 
 @media(min-width: 1200px) {
@@ -308,7 +515,7 @@
         width: 100%;
         position: fixed;
         top: 0;
-        z-index: 1000;
+        z-index: 10000;
     }
     #utilNav {
         position: relative;
@@ -327,51 +534,29 @@
         }
     }
     #deptHeader {
-        position: relative;
         margin-top: 7em;
-        h1 {
-            margin-top: -.2em;
-            margin-bottom: -.3em;
-        }
-        h4 {
-            color: #999;
-        }
-        > div {
-            position: relative;
-        }
         #primaryNav {
             display: block;
             position: absolute;
             bottom: 0;
             right: 0;
+            left: 0;
             padding-right: 0;
-            ul {
-                list-style: none;
-                margin-bottom: 0;
-            }
-            li {
-                float: left;
-                border-left: .1em solid #c2c2c2;
-                width: 10.857em;
-                padding: 0 .75em .25em 1em;
-                font-weight: 700;
-            }
-            a {
-                color: #000;
-                display: block;
-                text-decoration: none;
-            }
-            > ul > li {
-                &:last-child {
-                    width: 10em;
-                    padding-right: 0;
-                }
-                &:nth-child(1) {
-                    width: 7.14em;
-                    height: 2.85em;
-                    padding-bottom: 3.15em;
-                }
-            }
+            margin-left: 0;
+            margin-top: 0;
+        }
+        #primaryNav > ul {
+            float: right;
+
+        }
+    }
+    #main {
+        #ebill {
+            bottom: 8em;
+        }
+        #navbar #services {
+            width: auto;
+            margin: 0;
         }
     }
     #footer {
@@ -390,167 +575,105 @@
             padding-left: 0;
         }
     }
-    #main #navbar {
-        z-index: 999;
-        position: absolute;
-        bottom: 0;
-        margin-left: 15px;
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        li {
-            float: left;
-        }
-        a {
-            display: block;
-            padding: .75em 1em;
-        }
-        #services {
-            float: left;
-            background-color: #191919;
-            a {
-                color: #fff;
-                text-decoration: none;
-            }
-            li {
-                margin-right: .75em;
-            }
-            > li {
-                &:nth-child(5) {
-                    width: 6.857em;
-                }
-                &:nth-child(6) {
-                    margin-right: 2em;
-                }
-            }
-        }
-        #trans {
-            float: left;
-            li {
-                background-color: #e6002e;
-                border-right: .143em solid #000;
-            }
-            a {
-                color: #fff;
-                text-decoration: none;
-            }
-            #navAcct {
-                width: 12.28em;
-                position: relative;
-                .dropdown-menu {
-                    margin: 0;
-                    padding: 0;
-                    //Instead of the line below you could use @include column-count($count)
-                    column-count: 2;
-                    //Instead of the line below you could use @include column-gap($width)
-                    column-gap: 1px;
-                }
-            }
-            #navReport {
-                width: 7em;
-                position: relative;
-            }
-            #navRid {
-                width: 9em;
-            }
-            #navPick {
-                width: 8em;
-                border-right: none;
-            }
-            #acctDrop {
-                position: absolute;
-            }
-            #reportDrop {
-                position: absolute;
-            }
-            .dropdown-menu {
-                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-                border-radius: 0;
-                border-top: none;
-                li {
-                    clear: both;
-                    width: 100%;
-                    border: none;
-                }
-                > li > a {
-                    color: #000;
-                    &:hover {
-                        background-color: #cc0000;
-                        color: #000;
-                    }
-                }
-            }
-            > .open {
-                background-color: #fff;
-                a {
-                    color: #000;
-                }
-                > ul > li {
-                    background-color: #fff;
-                }
-            }
-        }
-    }
+    // #main #navbar {
+    //     z-index: 999;
+    //     position: absolute;
+    //     bottom: 0;
+    //     margin-left: 15px;
+    //     ul {
+    //         margin: 0;
+    //         padding: 0;
+    //         list-style: none;
+    //     }
+    //     li {
+    //         float: left;
+    //     }
+    //     a {
+    //         display: block;
+    //         padding: .75em 1em;
+    //     }
+    //     #services {
+    //         float: left;
+    //         background-color: #191919;
+    //         a {
+    //             color: #fff;
+    //             text-decoration: none;
+    //         }
+    //         > li {
+    //             &:nth-child(5) {
+    //                 width: 6.857em;
+    //             }
+    //             &:nth-child(6) {
+    //                 margin-right: 2em;
+    //             }
+    //         }
+    //     }
+    //     #trans {
+    //         float: left;
+    //         li {
+    //             background-color: #e6002e;
+    //             border-right: .143em solid #000;
+    //         }
+    //         a {
+    //             color: #fff;
+    //             text-decoration: none;
+    //         }
+    //         #navAcct {
+    //             width: 12.28em;
+    //             position: relative;
+    //             .dropdown-menu {
+    //                 margin: 0;
+    //                 padding: 0;
+    //                 column-count: 2;
+    //                 column-gap: 1px;
+    //             }
+    //         }
+    //         #navReport {
+    //             width: 7em;
+    //             position: relative;
+    //         }
+    //         #navRid {
+    //             width: 9.3em;
+    //         }
+    //         #navPick {
+    //             width: 9em;
+    //             border-right: none;
+    //         }
+    //         #acctDrop {
+    //             position: absolute;
+    //         }
+    //         #reportDrop {
+    //             position: absolute;
+    //         }
+    //         .dropdown-menu {
+    //             border-radius: 0;
+    //             border-top: none;
+    //             li {
+    //                 clear: both;
+    //                 width: 100%;
+    //                 border: none;
+    //             }
+    //             > li > a {
+    //                 color: #000;
+    //                 &:hover {
+    //                     background-color: #cc0000;
+    //                     color: #000;
+    //                 }
+    //             }
+    //         }
+    //         > .open {
+    //             background-color: #fff;
+    //             a {
+    //                 color: #000;
+    //             }
+    //             > ul > li {
+    //                 background-color: #fff;
+    //             }
+    //         }
+    //     }
+    // }
     #promo .item {
         margin-top: 2.25em;
-    }
-}
-
-#hamNavCont {
-    display: none;
-    position: absolute;
-    top: 3.5em;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-#hamNav {
-    font-size: 1.5em;
-    line-height: 3em;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding-top: 1.5em;
-    list-style: none;
-    background-color: rgba(0,108,146,1);
-    ul {
-        list-style: none;
-        background-color: rgba(0,108,146,1);
-    }
-    > li {
-        > a {
-            text-transform: capitalize;
-            margin: 0 1em;
-            > i {
-                margin-top: 1em;
-            }
-        }
-        + li {
-            border-top: 1px solid rgba(255,255,255,0.25);
-        }
-        > ul {
-            display: none;
-            background-color: rgba(0,52,89,0.75);
-            line-height: 2em;
-        }
-    }
-    .dismiss {
-        margin: 1em;
-        border-top: none;
-        i {
-            position: absolute;
-            top: -.3em;
-            right: 1.1em;
-        }
-    }
-    a {
-        color: #fff;
-        display: block;
-        text-decoration: none;
     }
 }
 
@@ -558,6 +681,9 @@
 #seaGovHeader {
     .container {
         max-width: 1170px !important;
+    }
+    .navbar-fixed-top {
+        position: relative !important;
     }
     #hamNavbar-fixed-top {
         position: static !important;
