@@ -4,12 +4,36 @@
 		"selected_items":
 		[
 			[
-				"ba",
-				"background-color: "
+				"ma",
+				"margin-top: "
+			],
+			[
+				"bo",
+				"bottom: "
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"b",
+				"both"
+			],
+			[
+				"i",
+				"inline"
 			],
 			[
 				"font",
-				"font-family: "
+				"font-size: "
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"ba",
+				"background-color: "
 			],
 			[
 				"back",
@@ -18,10 +42,6 @@
 			[
 				"pad",
 				"padding-top"
-			],
-			[
-				"bo",
-				"border-top"
 			],
 			[
 				"mar",
@@ -42,10 +62,6 @@
 			[
 				"hamNav",
 				"hamNavCont"
-			],
-			[
-				"ma",
-				"margin"
 			],
 			[
 				"border-",
@@ -76,10 +92,6 @@
 				"border-bottom"
 			],
 			[
-				"b",
-				"inline-block"
-			],
-			[
 				"di",
 				"display"
 			],
@@ -95,6 +107,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "css/main.scss",
+			"settings":
+			{
+				"buffer_size": 16297,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/SASS Build/SASS - Compressed.sublime-build",
 	"command_palette":
@@ -188,9 +208,20 @@
 	},
 	"file_history":
 	[
+		"/Q/nikdev/responsive/util-responsive/css/main.scss",
+		"/Q/nikdev/responsive/util-responsive/index.html",
+		"/Q/nikdev/dso/taps-tracker/util-taps-tracker/default.htm",
+		"/Q/nikdev/responsive/util-responsive/css/main.css",
+		"/Q/nikdev/responsive/util-responsive/css/bootstrap-theme.css.map",
+		"/Q/nikdev/responsive/backup/old-12022016/css/main.scss",
+		"/Q/nikdev/responsive/backup/old-12022016/index.html",
+		"/Q/nikdev/gulp-test/src/scss/main.scss",
+		"/Q/nikdev/responsive/util-responsive/css/test.scss",
+		"/Q/nikdev/responsive/util-responsive/index2.html",
+		"/Q/nikdev/responsive/util-responsive/css/main2.scss",
+		"/Q/nikdev/responsive/util-responsive/css/main2.css",
 		"/Q/nikdev/gulp-test/gulpfile.js",
 		"/Q/nikdev/gulp-test/src/js/courage.js",
-		"/Q/nikdev/gulp-test/src/scss/main.scss",
 		"/Q/nikdev/gulp-test/source/js/courage.js",
 		"/Q/nikdev/gulp-test/source/scss/main.scss",
 		"/Q/nikdev/gulp-test/public/js/scripts.min.js",
@@ -202,13 +233,10 @@
 		"/C/Users/WeisenN/AppData/Roaming/Sublime Text 2/Packages/HTML Boilerplate/README.md",
 		"/Q/nikdev/gulp-test/package.json",
 		"/C/Users/WeisenN/Desktop/default.htm",
-		"/Q/nikdev/responsive/util-responsive/index.html",
 		"/Q/nikdev/gulp-test/gulp-test.sublime-workspace",
-		"/Q/nikdev/responsive/util-responsive/css/main.scss",
 		"/Q/nikdev/gulp-test/gulp-test.sublime-project",
 		"/Q/nikdev/misc/grunt-test/Gruntfile.js",
 		"/Q/nikdev/gulp-test/node_modules/gulp-util/README.md",
-		"/Q/nikdev/responsive/util-responsive/css/main.css",
 		"/C/Users/WeisenN/AppData/Roaming/Sublime Text 2/Packages/SublimeOnSaveBuild/SublimeOnSaveBuild.py",
 		"/Q/nikdev/responsive/util-responsive/.gitattributes",
 		"/Q/nikdev/responsive/util-responsive/.gitignore",
@@ -266,6 +294,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"inlineSearch",
+			"inlineSeacrh",
+			"/Seattle_Public_Utilities",
+			"director",
+			"col-lg-3 footerCat",
+			"primaryNav",
 			"source",
 			"']);\n",
 			"';",
@@ -284,6 +318,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"q",
+			".",
+			"col-md-3 footerCat",
 			"src",
 			"'",
 			"#hamNav"
@@ -302,8 +339,37 @@
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "css/main.scss",
+					"settings":
+					{
+						"buffer_size": 16297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7448,
+								7448
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7062.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -335,7 +401,7 @@
 		"cols":
 		[
 			0.0,
-			0.586124172126,
+			0.483158857959,
 			1.0
 		],
 		"rows":
@@ -378,6 +444,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 219.0,
+	"side_bar_width": 342.0,
 	"status_bar_visible": true
 }

@@ -268,7 +268,10 @@
     }
 }
 
-@media(min-width:768px) {
+@media(min-width: 768px) {
+    #govHeader {
+        padding: 0;
+    }
     #deptHeader {
         background-image: none;
         position: relative;
@@ -349,7 +352,6 @@
         }
         #alert {
             position: absolute;
-            bottom: 8em;
             padding: 0;
             margin-left: 15px;
             margin-bottom: -1.5em;
@@ -455,7 +457,7 @@
                     position: relative;
                 }
                 #navRid {
-                    width: 9.3em;
+                    width: 9.4em;
                 }
                 #navPick {
                     width: 9em;
@@ -495,17 +497,20 @@
             }
         }
     }
-    #footer li {
-        border: none;
-    }
 }
 
 @media(min-width: 992px) {
+    #govHeader {
+        margin: 0;
+    }
     #deptHeader {
         #primaryNav {
             float: right;
             margin-top: -3em;
         }
+    }
+    #footer li {
+        border: none;
     }
 }
 
