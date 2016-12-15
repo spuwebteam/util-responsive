@@ -10,8 +10,6 @@
         <title></title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <!--######### REMOVE FA LINK FOR DEPLOY #########-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
         <script type="text/javascript">
             window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>');
@@ -68,12 +66,12 @@
         <div id="deptHeader">
             <div class="container">
                 <div class="row hidden-xs">
-                    <div id="director" class="col-sm-5">
+                    <div id="director" class="">
                         <h1>Seattle Public Utilities</h1>
-                        <h4 class="hidden-sm hidden-xs">Mami Hara, Director</h4>
+                        <h4 class="hidden-sm hidden-xs">Mami Hara, General Manager/CEO</h4>
                     </div>
-                    <div  id="primaryNav" class="col-sm-7">
-                        <ul class="caps pull-right">
+                    <div  id="primaryNav" class="">
+                        <ul class="caps">
                             <li>
                                 <a href="http://www.seattle.gov/util/MyServices">Services</a>
                             </li>
@@ -89,7 +87,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="visible-xs visible-sm">
+                <div class="visible-xs">
                     <div class="row">
                         <div class="col-xs-8">
                             <h3>Seattle Public Utilities</h3>
@@ -103,10 +101,10 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <form class="form-inline" role="search">
-                                <div id="inlineSearch" class="input-group">
-                                    <label for="inlineSearch" class="sr-only">Search</label>
-                                    <input type="text" class="form-control" name="inlineSearch" placeholder="What do you need help with?">
+                            <form class="form-inline" role="search" method="get" action="http://find.seattle.gov/search">
+                                <div id="q" class="input-group">
+                                    <label for="q" class="sr-only">Search</label>
+                                    <input type="text" class="form-control" name="q" placeholder="What do you need help with?">
                                     <span class="input-group-btn">
                                         <button id="searchButton" type="submit" class="btn" name="btnSearch" value="Search" onclick="document.forms['googleSearch'].submit()"><i class="fa fa-search"></i></button>                            
                                     </span>                                                                                              
@@ -145,11 +143,11 @@
                 </div>
                 ### end Red Box-->
                 <div class="row hidden-xs">
-                    <div id="ebill" class="col-lg-3 col-md-10">
+                    <div id="ebill" class="col-lg-5 col-md-6">
                         <div id="signup">
                             <h1>EBilling</h1>
-                            <p>Pay your SPU and your City Light bills, view activity,
-                            edit your profile or add and delete accounts.</p>
+                            <p>Pay your SPU and City Light bills, view usage,
+                            edit your profile, and add or delete accounts.</p>
                             <p><a href="https://secure8.i-doxs.net/SeattleUtilities/Enroll.aspx" target="_blank" class="caps">Sign up</a></p>
                         </div>
                         <div id="pay">
@@ -166,10 +164,10 @@
                             <a href="https://secure8.i-doxs.net/SeattleUtilities/Enroll.aspx">Sign up for ebilling</a>
                         </li>
                         <li>
-                            <a href="#">My account, billing & payments</a>
+                            <a href="http://www.seattle.gov/util/MyServices/MyAccount/index.htm">My account, billing & payments</a>
                         </li>
                         <li>
-                            <a href="#">Report problems</a>
+                            <a href="http://www.seattle.gov/util/HelpFAQs/index.htm">Report problems</a>
                         </li>
                         <li>
                             <a href="http://www.seattle.gov/util/MyServices/LookItUpWhatsAccepted/index.htm">How do I get rid of this</a>
@@ -180,7 +178,7 @@
                             <a href="http://www.seattle.gov/util/MyServices/Recycling/LookUpCollectionDay/index.htm">What's my pickup day</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="http://www.seattle.gov/util/MyServices/index.htm">Services</a>
                         </li>
                         <li>
                             <a href="http://www.seattle.gov/util/EnvironmentConservation/">Environment & conservation</a>
@@ -317,7 +315,7 @@
                             <img src="img/promo3.jpg" />
                             <h4>Save yourself a trip to the dump</h4>
                             <p class="hidden-sm hidden-xs">
-                                For a fee, we can pick up your bulky items, like mattresses, appliances and electronics.
+                                For a fee, we can pick up your bulky items, like mattresses, appliances, and electronics.
                             </p>
                         </a>
                     </div>
@@ -332,7 +330,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div id="branding" class="col-lg-3">
+                    <div id="branding" class="col-md-3">
                         <div class="col-lg-4">
                             <img src="http://www.seattle.gov/images/2015_IMG/logoHome.png" />
                         </div>
@@ -351,7 +349,7 @@
                             <a href="http://www.facebook.com/SeattlePublicUtilities" target="_blank"><img alt="facebook" src="http://seattle.gov/util/cs/groups/public/@spu/documents/webproductionfile/3_036023.png"></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 footerCat">
+                    <div class="col-md-3 footerCat">
                         <ul>
                             <li>
                                 <h5 class="caps">Pay My Bill</h5>
@@ -360,7 +358,7 @@
                                 <a target="_blank" href="https://secure8.i-doxs.net/SeattleUtilities/default.aspx">Single Payment</a>
                             </li>
                             <li>
-                                <a href="https://secure8.i-doxs.net/SeattleUtilities/default.aspx">Login to eBilling</a>
+                                <a href="https://secure8.i-doxs.net/SeattleUtilities/default.aspx" target="_blank">Log into eBilling</a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://secure8.i-doxs.net/SeattleUtilities/Enroll.aspx">Sign Up for eBilling</a>
@@ -376,7 +374,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 footerCat">
+                    <div class="col-md-3 footerCat">
                         <ul>
                             <li>
                                 <h5 class="caps">My Account</h5>
@@ -388,22 +386,22 @@
                                 <a href="http://www.seattle.gov/util/MyServices/Recycling/LookUpCollectionDay/index.htm">Look Up Pickup Day</a>
                             </li>
                             <li>
-                                <a href="http://www.seattle.gov/util/index.htm">Print Pickup Calendar</a>
+                                <a href="http://www.seattle.gov/util/warp/CollectionCalendar/Index?Print=true" target="_blank">Print Pickup Calendar</a>
                             </li>
                             <li>
                                 <a href="http://www.seattle.gov/util/MyServices/Garbage/DumpTransferStation/index.htm">Dump Hours & Locations</a>
                             </li>
                             <li>
-                                <a href="http://www.seattle.gov/util/index.htm">Start/Stop Service</a>
+                                <a href="http://www.seattle.gov/util/MyServices/MyAccount/Moving_Change_Your_Account/index.htm">Start/Stop Service</a>
                             </li>
                             <li>
-                                <a href="http://www.seattle.gov/util/MyServices/Garbage/ChangeBinSize/index.htm">Change Bin Size</a>
+                                <a href="http://www.seattle.gov/util/MyServices/Garbage/ChangeBinSize/index.htm">Change Your Bin Size</a>
                             </li>
                             <li>
                                 <a href="http://www.seattle.gov/util/MyServices/Garbage/MissingorDamagedBin/index.htm">Missing or Damaged Bin</a>
                             </li>
                             <li>
-                                <a href="https://seattle-csrprodcwi.motorolasolutions.com/ServiceRequest.mvc/SRIntakeStep2?id=PUGRAFFI">Report Graffiti</a>
+                                <a href="https://seattle-csrprodcwi.motorolasolutions.com/ServiceRequest.mvc/SRIntakeStep2?id=PUGRAFFI" target="_blank">Report Graffiti</a>
                             </li>
                             <li>
                                 <a href="http://www.seattle.gov/util/EnvironmentConservation/OurCity/ReportPollution/index.htm">Report Pollution</a>
@@ -413,7 +411,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 footerCat">
+                    <div class="col-md-3 footerCat">
                         <ul>
                             <li>
                                 <h5 class="caps">About Us</h5>
@@ -451,150 +449,150 @@
                     <a href="#" ><i class="fa fa-times pull-right"></i></a>
                 </li>
                 <li>        
-                    <a href="/Seattle_Public_Utilities/MyServices/index.htm">Services</a>
+                    <a href="http://www.seattle.gov/util/MyServices/index.htm">Services</a>
                     <ul>                    
                         <li>        
-                            <a href="/Seattle_Public_Utilities/MyServices/MyAccount/index.htm">My Account</a>
+                            <a href="http://www.seattle.gov/util/MyServices/MyAccount/index.htm">My Account</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/MyServices/Recycling/index.htm">Recycling</a>
+                            <a href="http://www.seattle.gov/util/MyServices/Recycling/index.htm">Recycling</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/MyServices/Garbage/index.htm">Garbage</a>
+                            <a href="http://www.seattle.gov/util/MyServices/Garbage/index.htm">Garbage</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/MyServices/FoodYard/index.htm">Food &amp; Yard</a>
+                            <a href="http://www.seattle.gov/util/MyServices/FoodYard/index.htm">Food &amp; Yard</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/MyServices/Water/index.htm">Water</a>
+                            <a href="http://www.seattle.gov/util/MyServices/Water/index.htm">Water</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/MyServices/DrainageSewer/index.htm">Drainage &amp; Sewer</a>
+                            <a href="http://www.seattle.gov/util/MyServices/DrainageSewer/index.htm">Drainage &amp; Sewer</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/MyServices/Rates/index.htm">Residential Rates</a>
+                            <a href="http://www.seattle.gov/util/MyServices/Rates/index.htm">Residential Rates</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/MyServices/LookItUpWhatsAccepted/index.htm">Look It Up</a>
+                            <a href="http://www.seattle.gov/util/MyServices/LookItUpWhatsAccepted/index.htm">Look It Up</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/MyServices/GIS/index.htm">GIS</a>
+                            <a href="http://www.seattle.gov/util/MyServices/GIS/index.htm">GIS</a>
                         </li>
                     </ul>
                 </li>   
                 <li>        
-                    <a href="/Seattle_Public_Utilities/EnvironmentConservation/index.htm">Environment &amp; Conservation</a>
+                    <a href="http://www.seattle.gov/util/EnvironmentConservation/index.htm">Environment &amp; Conservation</a>
                     <ul>
                         <li>        
-                            <a href="/Seattle_Public_Utilities/EnvironmentConservation/Recycling/index.htm">Recycling</a>
+                            <a href="http://www.seattle.gov/util/EnvironmentConservation/Recycling/index.htm">Recycling</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/EnvironmentConservation/MyHome/index.htm">My Home</a>
+                            <a href="http://www.seattle.gov/util/EnvironmentConservation/MyHome/index.htm">My Home</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/EnvironmentConservation/OurCity/index.htm">Our City</a>
+                            <a href="http://www.seattle.gov/util/EnvironmentConservation/OurCity/index.htm">Our City</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/EnvironmentConservation/OurWatersheds/index.htm">Our Watersheds</a>
+                            <a href="http://www.seattle.gov/util/EnvironmentConservation/OurWatersheds/index.htm">Our Watersheds</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/EnvironmentConservation/Projects/index.htm">Projects</a>
+                            <a href="http://www.seattle.gov/util/EnvironmentConservation/Projects/index.htm">Projects</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/EnvironmentConservation/Education/index.htm">Education</a>
+                            <a href="http://www.seattle.gov/util/EnvironmentConservation/Education/index.htm">Education</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/EnvironmentConservation/MyLawnGarden/index.htm">Lawn &amp; Garden</a>
+                            <a href="http://www.seattle.gov/util/EnvironmentConservation/MyLawnGarden/index.htm">Lawn &amp; Garden</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/EnvironmentConservation/GetInvolved/index.htm">Get Involved</a>
+                            <a href="http://www.seattle.gov/util/EnvironmentConservation/GetInvolved/index.htm">Get Involved</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/EnvironmentConservation/ClimateChangeProgram/index.htm">Climate Change</a>
+                            <a href="http://www.seattle.gov/util/EnvironmentConservation/ClimateChangeProgram/index.htm">Climate Change</a>
                         </li>
                     </ul>
                 </li>   
                 <li>        
-                    <a href="/Seattle_Public_Utilities/Engineering/index.htm">Engineering</a>
+                    <a href="http://www.seattle.gov/util/Engineering/index.htm">Engineering</a>
                     <ul>
                         <li>        
-                            <a href="/Seattle_Public_Utilities/Engineering/DevelopmentServicesOffice/index.htm">DSO</a>
+                            <a href="http://www.seattle.gov/util/Engineering/DevelopmentServicesOffice/index.htm">DSO</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/Engineering/Obtain_Utility_Services/index.htm">Utility Services</a>
+                            <a href="http://www.seattle.gov/util/Engineering/Obtain_Utility_Services/index.htm">Utility Services</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/Engineering/LandSurveyServices/index.htm">Land Survey</a>
+                            <a href="http://www.seattle.gov/util/Engineering/LandSurveyServices/index.htm">Land Survey</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/Engineering/Records_Vault/index.htm">Records Vault</a>
+                            <a href="http://www.seattle.gov/util/Engineering/Records_Vault/index.htm">Records Vault</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/Engineering/CAD_Resources/index.htm">CAD Resources</a>
+                            <a href="http://www.seattle.gov/util/Engineering/CAD_Resources/index.htm">CAD Resources</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/Engineering/Consulting_Resources/index.htm">Consultants/Contractors</a>
+                            <a href="http://www.seattle.gov/util/Engineering/Consulting_Resources/index.htm">Consultants/Contractors</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/Engineering/StandardSpecsPlans/index.htm">Standard Specs &amp; Plans</a>
+                            <a href="http://www.seattle.gov/util/Engineering/StandardSpecsPlans/index.htm">Standard Specs &amp; Plans</a>
                         </li>
                     </ul>
                 </li>   
                 <li>        
-                    <a href="/Seattle_Public_Utilities/ForBusinesses/index.htm">For Businesses</a>
+                    <a href="http://www.seattle.gov/util/ForBusinesses/index.htm">For Businesses</a>
                     <ul>
                         <li>        
-                            <a href="/Seattle_Public_Utilities/ForBusinesses/SolidWaste/index.htm">Solid Waste</a>
+                            <a href="http://www.seattle.gov/util/ForBusinesses/SolidWaste/index.htm">Solid Waste</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/ForBusinesses/Water/index.htm">Water</a>
+                            <a href="http://www.seattle.gov/util/ForBusinesses/Water/index.htm">Water</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/ForBusinesses/DrainageSewerBusinesses/index.htm">Drainage &amp; Sewer</a>
+                            <a href="http://www.seattle.gov/util/ForBusinesses/DrainageSewerBusinesses/index.htm">Drainage &amp; Sewer</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/ForBusinesses/Landscapes/index.htm">Landscapes</a>
+                            <a href="http://www.seattle.gov/util/ForBusinesses/Landscapes/index.htm">Landscapes</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/ForBusinesses/GreenYourBusiness/index.htm">Green Business</a>
+                            <a href="http://www.seattle.gov/util/ForBusinesses/GreenYourBusiness/index.htm">Green Business</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/ForBusinesses/Construction/index.htm">Construction</a>
+                            <a href="http://www.seattle.gov/util/ForBusinesses/Construction/index.htm">Construction</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/ForBusinesses/BusinesswithSPU/index.htm">Business with SPU</a>
+                            <a href="http://www.seattle.gov/util/ForBusinesses/BusinesswithSPU/index.htm">Business with SPU</a>
                         </li>
                         
                         <li>        
-                            <a href="/Seattle_Public_Utilities/ForBusinesses/KeyAccounts/index.htm">Key Customers</a>
+                            <a href="http://www.seattle.gov/util/ForBusinesses/KeyAccounts/index.htm">Key Customers</a>
                         </li>
                     </ul>
                 </li>
