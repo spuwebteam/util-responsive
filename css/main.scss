@@ -366,7 +366,7 @@
             }
             #signup {
                 color: #fff;
-                background-color: #4585f2;
+                background-color: #003450;
                 h1 {
                     font-family: 'aleoregular', 'Open Sans', 'sans-serif';
                 }
@@ -387,7 +387,7 @@
                 font-size: 1em;
                 padding: 1.2em 1em;
                 margin-top: 2em;
-                background-color: #4585f2;
+                background-color: #003450;
                 padding: 1.2em;
                 a {
                     display: block;
@@ -412,14 +412,15 @@
         }
         #pay {
             color: #fff;
-            background-color: #025cf6;
+            background-color: #005582;
+            border-top: 1px solid #fff;
             a {
                 display: block;
                 color: #fff;
                 font-size: 1.2em;
             }
             &:hover {
-                background-color: #0152dd;
+                background-color: #00669c;
             }
         }
         #navbar {
@@ -605,103 +606,6 @@
             padding-left: 0;
         }
     }
-    // #main #navbar {
-    //     z-index: 999;
-    //     position: absolute;
-    //     bottom: 0;
-    //     margin-left: 15px;
-    //     ul {
-    //         margin: 0;
-    //         padding: 0;
-    //         list-style: none;
-    //     }
-    //     li {
-    //         float: left;
-    //     }
-    //     a {
-    //         display: block;
-    //         padding: .75em 1em;
-    //     }
-    //     #services {
-    //         float: left;
-    //         background-color: #191919;
-    //         a {
-    //             color: #fff;
-    //             text-decoration: none;
-    //         }
-    //         > li {
-    //             &:nth-child(5) {
-    //                 width: 6.857em;
-    //             }
-    //             &:nth-child(6) {
-    //                 margin-right: 2em;
-    //             }
-    //         }
-    //     }
-    //     #trans {
-    //         float: left;
-    //         li {
-    //             background-color: #e6002e;
-    //             border-right: .143em solid #000;
-    //         }
-    //         a {
-    //             color: #fff;
-    //             text-decoration: none;
-    //         }
-    //         #navAcct {
-    //             width: 12.28em;
-    //             position: relative;
-    //             .dropdown-menu {
-    //                 margin: 0;
-    //                 padding: 0;
-    //                 column-count: 2;
-    //                 column-gap: 1px;
-    //             }
-    //         }
-    //         #navReport {
-    //             width: 7em;
-    //             position: relative;
-    //         }
-    //         #navRid {
-    //             width: 9.3em;
-    //         }
-    //         #navPick {
-    //             width: 9em;
-    //             border-right: none;
-    //         }
-    //         #acctDrop {
-    //             position: absolute;
-    //         }
-    //         #reportDrop {
-    //             position: absolute;
-    //         }
-    //         .dropdown-menu {
-    //             border-radius: 0;
-    //             border-top: none;
-    //             li {
-    //                 clear: both;
-    //                 width: 100%;
-    //                 border: none;
-    //             }
-    //             > li > a {
-    //                 color: #000;
-    //                 &:hover {
-    //                     background-color: #cc0000;
-    //                     color: #000;
-    //                 }
-    //             }
-    //         }
-    //         > .open {
-    //             background-color: #fff;
-    //             a {
-    //                 color: #000;
-    //             }
-    //             > ul > li {
-    //                 background-color: #fff;
-    //             }
-    //         }
-    //     }
-    // }
     #promo .item,
     .promo .item {
         margin-top: 2.25em;
