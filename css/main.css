@@ -117,13 +117,16 @@
 #promo h4,
 .promo h4 {
   color: #4585f2; }
-#promo a:hover,
-.promo a:hover {
-  text-decoration: none;
-  opacity: .85; }
-#promo a > p,
-.promo a > p {
-  color: #000; }
+#promo a,
+.promo a {
+  display: block; }
+  #promo a:hover,
+  .promo a:hover {
+    text-decoration: none;
+    opacity: .85; }
+  #promo a > p,
+  .promo a > p {
+    color: #000; }
 
 #footer {
   margin-top: 1.5em;
@@ -234,7 +237,7 @@
       margin-top: -.2em;
       margin-bottom: -.3em; }
     #deptHeader h4 {
-      color: #999; }
+      color: #666; }
     #deptHeader > div {
       position: relative; }
     #deptHeader #director {
