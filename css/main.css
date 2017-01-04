@@ -165,6 +165,17 @@
     margin-bottom: 1em; }
   #footer #socialMedia p {
     margin-bottom: 1em; }
+  #footer .footerCat:last-child li:last-child {
+    border: none; }
+  #footer #showTranslate {
+    position: absolute; }
+  #footer #gTranslate {
+    height: 4em;
+    margin-left: 1em; }
+    #footer #gTranslate a {
+      color: #000;
+      padding: 0px;
+      display: inline !important; }
 
 #hamNavCont {
   display: none;
@@ -410,7 +421,10 @@
     margin-top: -3em; }
 
   #footer li {
-    border: none; } }
+    border: none; }
+
+  .footerCat:last-child li:last-child {
+    padding: 5.25em 0em; } }
 @media (min-width: 1200px) {
   #govHeader {
     background-color: #003da5;
@@ -463,6 +477,8 @@
       margin-top: 14em; }
     #footer li a {
       padding-left: 0; }
+    #footer #gTranslate {
+      margin-left: 0px; }
 
   #promo .item,
   .promo .item {

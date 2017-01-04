@@ -208,6 +208,22 @@
     #socialMedia p {
         margin-bottom: 1em;
     }
+    .footerCat:last-child li:last-child {
+        border:none;
+    }
+    #showTranslate{
+        position:absolute;
+    }
+    #gTranslate {
+        height:4em;
+        margin-left:1em;
+
+        a {
+            color: #000;
+            padding: 0px;
+            display: inline !important;
+        }
+    }
 }
 
 #hamNavCont {
@@ -538,6 +554,9 @@
     #footer li {
         border: none;
     }
+    .footerCat:last-child li:last-child {
+        padding: 5.25em 0em;
+    }
 }
 
 @media(min-width: 1200px) {
@@ -604,6 +623,9 @@
         }
         li a {
             padding-left: 0;
+        }
+        #gTranslate {
+            margin-left:0px;
         }
     }
     #promo .item,

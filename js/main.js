@@ -45,4 +45,31 @@ $(document).ready(function() {
             closeNav(e);
         }
     });
+
+    //Google Translate ------------------------------/
+    $('#showTranslate').on('click', function(e) {
+        e.preventDefault();
+        loadGTranslate();
+        this.remove();
+    });
+
+    if (document.cookie.indexOf('googtrans=') >= 0) {
+        loadGTranslate();
+        $('#showTranslate').remove();
+    }
 });
+
+function gtInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', 
+        layout: google.translate.TranslateElement.InlineLayout.VERTICAL, 
+        autoDisplay: false}, 'gTranslate');
+}
+
+function loadGTranslate() {
+    var gt = document.createElement('script');
+        gt.type = 'text/javascript';
+        gt.async = true;
+        gt.src = 'http://translate.google.com/translate_a/element.js?cb=gtInit';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild(gt);
+}
+
