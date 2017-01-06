@@ -46,7 +46,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-### Sublime Text ###
+# Sass 
+.sass-cache
+.sass-cache/*
+
+# Sublime Text
 
 # cache files for sublime text
 *.tmlanguage.cache
