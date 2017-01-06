@@ -5,7 +5,7 @@
 		[
 			[
 				"ma",
-				"margin-top: "
+				"margin: "
 			],
 			[
 				"bo",
@@ -107,14 +107,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "css/main.scss",
-			"settings":
-			{
-				"buffer_size": 16297,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/SASS Build/SASS - Compressed.sublime-build",
 	"command_palette":
@@ -208,14 +200,16 @@
 	},
 	"file_history":
 	[
-		"/Q/nikdev/responsive/util-responsive/css/main.scss",
+		"/Q/nikdev/gulp-test/src/scss/main.scss",
 		"/Q/nikdev/responsive/util-responsive/index.html",
+		"/Q/nikdev/responsive/util-responsive/css/main.scss",
+		"/C/Users/WeisenN/Desktop/test/test.html",
+		"/Q/nikdev/responsive/util-responsive/css/sass-watch.cmd",
 		"/Q/nikdev/dso/taps-tracker/util-taps-tracker/default.htm",
 		"/Q/nikdev/responsive/util-responsive/css/main.css",
 		"/Q/nikdev/responsive/util-responsive/css/bootstrap-theme.css.map",
 		"/Q/nikdev/responsive/backup/old-12022016/css/main.scss",
 		"/Q/nikdev/responsive/backup/old-12022016/index.html",
-		"/Q/nikdev/gulp-test/src/scss/main.scss",
 		"/Q/nikdev/responsive/util-responsive/css/test.scss",
 		"/Q/nikdev/responsive/util-responsive/index2.html",
 		"/Q/nikdev/responsive/util-responsive/css/main2.scss",
@@ -294,6 +288,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"i",
+			"<i ",
+			"sr-only",
+			"pay",
+			"searchM",
+			"searchModal",
+			"searchmodal",
+			"href=\"#",
+			"govHeader",
 			"inlineSearch",
 			"inlineSeacrh",
 			"/Seattle_Public_Utilities",
@@ -339,37 +342,8 @@
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "css/main.scss",
-					"settings":
-					{
-						"buffer_size": 16297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7448,
-								7448
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7062.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -401,7 +375,7 @@
 		"cols":
 		[
 			0.0,
-			0.483158857959,
+			0.641145833333,
 			1.0
 		],
 		"rows":
@@ -443,7 +417,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 342.0,
+	"side_bar_visible": false,
+	"side_bar_width": 244.0,
 	"status_bar_visible": true
 }
