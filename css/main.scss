@@ -117,8 +117,7 @@
     }
 }
 
-#promo,
-#sbp-promo {
+#promo {
     img {
         width: 100%;
         height: auto;
@@ -158,7 +157,30 @@
             color: #000;
         }
     }
+}
 
+#sbp-promo {
+    padding-top: 3em;
+    .item {
+        margin-top: .9em;
+        h4 {
+            font-size: 125%;
+        }
+    }
+    h4 {
+        color: #4585f2;
+    }
+    a {
+        display: block;
+
+        &:hover {
+            text-decoration: none;
+            opacity: .85;
+        }
+        > p {
+            color: #000;
+        }
+    }
 }
 
 #footer {
