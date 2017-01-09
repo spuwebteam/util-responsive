@@ -72,7 +72,7 @@ $(document).ready(function() {
     }
 });
 
-function gtInit() {
+var gtInit = function() {
     new google.translate.TranslateElement({ pageLanguage: 'en', 
         layout: google.translate.TranslateElement.InlineLayout.VERTICAL, 
         autoDisplay: false}, 'gTranslate');
@@ -93,7 +93,7 @@ function gtInit() {
         });
 }
 
-function loadGTranslate() {
+var loadGTranslate = function() {
     var gt = document.createElement('script');
         gt.type = 'text/javascript';
         gt.async = true;
