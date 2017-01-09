@@ -81,8 +81,19 @@
   #main #nav-xs a {
     color: #000;
     padding: 15px; }
+    #main #nav-xs a.pmb {
+      background: #132cc5;
+      color: #fff; }
+    #main #nav-xs a.sue {
+      background: #286ee5;
+      color: #fff; }
   #main #nav-xs ul + ul {
     margin-top: 4px; }
+  #main #nav-xs ul > li > ul {
+    display: none; }
+  #main #nav-xs ul > li > ul > li > a {
+    background: #fff;
+    padding-left: 30px; }
 #main #alert #redbox {
   padding: 1.5em;
   margin-top: 1em;
@@ -165,6 +176,17 @@
     margin-bottom: 1em; }
   #footer #socialMedia p {
     margin-bottom: 1em; }
+  #footer .footerCat:last-child li:last-child {
+    border: none; }
+  #footer #showTranslate {
+    position: absolute; }
+  #footer #gTranslate {
+    height: 4em;
+    margin-left: 1em; }
+    #footer #gTranslate a {
+      color: #000;
+      padding: 0px;
+      display: inline !important; }
 
 #hamNavCont {
   display: none;
@@ -214,12 +236,6 @@
   #main #nav-xs a {
     color: #000;
     padding: 15px 8px; }
-  #main #nav-xs ul {
-    float: left;
-    width: 49%; }
-    #main #nav-xs ul + ul {
-      margin-top: 0;
-      margin-left: 4px; }
 
   #promo .item,
   .promo .item {
@@ -410,7 +426,10 @@
     margin-top: -3em; }
 
   #footer li {
-    border: none; } }
+    border: none; }
+
+  .footerCat:last-child li:last-child {
+    padding: 5.25em 0em; } }
 @media (min-width: 1200px) {
   #govHeader {
     background-color: #003da5;
@@ -463,6 +482,8 @@
       margin-top: 14em; }
     #footer li a {
       padding-left: 0; }
+    #footer #gTranslate {
+      margin-left: 0px; }
 
   #promo .item,
   .promo .item {
