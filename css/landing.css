@@ -116,7 +116,7 @@
       font-size: .95em; }
       @media (min-width: 992px) and (max-width: 1200px) {
         #textHeroCall .call a {
-          height: initial; } }
+          height: initial !important; } }
       @media (min-width: 1200px) {
         #textHeroCall .call a {
           padding: .75em 2em .75em .5em; } }
@@ -137,17 +137,24 @@
         top: 0;
         content: '';
         background: rgba(0, 0, 0, 0.35); }
+      #textHeroCall .call a:hover {
+        background: #000 !important; }
+        #textHeroCall .call a:hover * {
+          color: #fff !important; }
+        #textHeroCall .call a:hover:before {
+          background: #555; }
       #textHeroCall .call a span {
         display: inline-block;
-        width: 100%; }
+        width: 100%;
+        color: #000; }
         @media (min-width: 1200px) {
           #textHeroCall .call a span {
             text-align: right; } }
         #textHeroCall .call a span:first-child {
-          color: #fff;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          font-weight: 600;
+          line-height: 1.2em; }
         #textHeroCall .call a span:last-child {
-          color: #000;
           font-size: .9em; }
     #textHeroCall .call div:nth-child(2) a {
       background: #a6c63d; }
@@ -155,6 +162,15 @@
       background: #c7a800; }
     #textHeroCall .call div:nth-child(4) a {
       background: #c35dcd; }
+    #textHeroCall .call div:first-child:nth-last-child(2) a, #textHeroCall .call div:first-child:nth-last-child(2) ~ div a {
+      height: 167px;
+      font-size: 1.275em; }
+    #textHeroCall .call div:first-child:nth-last-child(3) a, #textHeroCall .call div:first-child:nth-last-child(3) ~ div a {
+      height: 106px;
+      font-size: 1.025em; }
+    #textHeroCall .call div:first-child:nth-last-child(4) a, #textHeroCall .call div:first-child:nth-last-child(4) ~ div a {
+      height: 75px;
+      font-size: 0.95em; }
 
 @media (min-width: 768px) {
   #leadContent1 h1 {

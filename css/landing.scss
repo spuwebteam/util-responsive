@@ -83,7 +83,7 @@
     }
 }
 
-#skinnyGroup{
+#skinnyGroup {
     background: #eee;
 
     h1{
@@ -156,28 +156,27 @@
         }
     }
     .call {
-        margin-top:2em;
+        margin-top: 2em;
 
         @media (min-width:1200px) {
-            margin-top:0;
+            margin-top: 0;
         }
         a {
-            background:#03bcf4;
-            display:block;
-            padding:.75em 2em .75em 1em;
-            height:75px;
-            margin-bottom:1.25em;
-            position:relative;
-            font-size:.95em;
+            background: #03bcf4;
+            display: block;
+            padding: .75em 2em .75em 1em;
+            height: 75px;
+            margin-bottom: 1.25em;
+            position: relative;
+            font-size: .95em;
 
             @media (min-width:992px) and (max-width:1200px) {
-                height:initial;
+                height: initial !important;
             }      
       
             @media (min-width:1200px) {
-                padding:.75em 2em .75em .5em;
+                padding: .75em 2em .75em .5em;
             }
-
             &:after,
             &:before {
                 position:absolute;
@@ -199,35 +198,59 @@
                 content:'';
                 background:rgba(0,0,0,.35);
             }
+            &:hover {
+                background: #000 !important;
+
+                * {
+                    color: #fff !important;
+                }
+                &:before{
+                    background: #555;
+                }
+            }
             span {
-                display:inline-block;
-                width:100%;
+                display: inline-block;
+                width: 100%;
+                color: #000;
 
                 @media (min-width:1200px) {
                     text-align: right;
                 }
                 &:first-child {
-                    color:#fff;
                     text-transform: uppercase;
+                    font-weight: 600;
+                    line-height: 1.2em;
                 }
                 &:last-child {
-                    color:#000;
                     font-size: .9em;
                 }
             }
 
         }
         div {
-            &:nth-child(2) a {
-                background:#a6c63d;
+            @mixin callColor($number, $color) {
+                &:nth-child(#{$number}) a {
+                    background: $color;
+                }
             }
-            &:nth-child(3) a {
-                background:#c7a800;
+            
+            @include callColor(2, #a6c63d);
+            @include callColor(3, #c7a800);
+            @include callColor(4, #c35dcd);
+
+            @mixin callGroup($number, $height, $fontsize) {
+                &:first-child:nth-last-child(#{$number}) a,
+                &:first-child:nth-last-child(#{$number}) ~ div a {
+                  height: $height;
+                  font-size: $fontsize;
+                }
             }
-            &:nth-child(4) a {
-                background:#c35dcd;
-            }
+
+            @include callGroup(2, 167px, 1.275em);
+            @include callGroup(3, 106px, 1.025em);
+            @include callGroup(4, 75px, .95em);
         }
+
     }
 }
 
