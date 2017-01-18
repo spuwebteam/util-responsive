@@ -25,6 +25,12 @@
   margin-bottom: 10px; }
   #secondaryNav-xs li {
     margin-top: 4px; }
+    @media (min-width: 544px) {
+      #secondaryNav-xs li {
+        width: 49%;
+        float: left; }
+        #secondaryNav-xs li:nth-child(even) {
+          margin-left: 4px; } }
   #secondaryNav-xs a {
     background: #d5dfe3;
     color: #000;
@@ -48,12 +54,6 @@
     .tertiaryNav .nav a:hover {
       background: #000; }
 
-@media (min-width: 544px) {
-  #secondaryNav-xs li {
-    width: 49%;
-    float: left; }
-    #secondaryNav-xs li:nth-child(even) {
-      margin-left: 4px; } }
 #skinnyGroup {
   background: #eee; }
   #skinnyGroup h1 {
@@ -65,6 +65,11 @@
 #leadContent1 h1,
 #leadContent2 h1 {
   font-weight: 800; }
+  @media (min-width: 768px) {
+    #leadGroup h1,
+    #leadContent1 h1,
+    #leadContent2 h1 {
+      margin-bottom: 40px; } }
 
 #textHeroCall {
   margin-top: 2.25em; }
@@ -112,13 +117,33 @@
       padding: .75em 2em .75em 1em;
       margin-bottom: 1.25em;
       position: relative;
-      font-size: .95em; }
+      font-size: .95em;
+      float: left;
+      width: calc(50% - 15px); }
       @media (min-width: 992px) and (max-width: 1200px) {
         #textHeroCall .call a {
           height: initial !important; } }
       @media (min-width: 1200px) {
         #textHeroCall .call a {
-          padding: .75em 2em .75em .5em; } }
+          padding: .75em 1.85em .75em .5em;
+          width: 100%; } }
+      #textHeroCall .call a:nth-child(2) {
+        background: #a6c63d; }
+      #textHeroCall .call a:nth-child(3) {
+        background: #c7a800; }
+      #textHeroCall .call a:nth-child(4) {
+        background: #c35dcd; }
+      #textHeroCall .call a:first-child:nth-last-child(2), #textHeroCall .call a:first-child:nth-last-child(2) ~ a {
+        height: 164px;
+        font-size: 1.275em; }
+      #textHeroCall .call a:first-child:nth-last-child(3), #textHeroCall .call a:first-child:nth-last-child(3) ~ a {
+        height: 105px;
+        font-size: 1.025em; }
+      #textHeroCall .call a:first-child:nth-last-child(4), #textHeroCall .call a:first-child:nth-last-child(4) ~ a {
+        height: 75px;
+        font-size: 0.95em; }
+      #textHeroCall .call a:nth-child(odd) {
+        margin-right: 30px; }
       #textHeroCall .call a:after, #textHeroCall .call a:before {
         position: absolute;
         right: 0;
@@ -154,26 +179,9 @@
           font-weight: 600;
           line-height: 1.2em; }
         #textHeroCall .call a span:last-child {
-          font-size: .9em; }
-    #textHeroCall .call div:nth-child(2) a {
-      background: #a6c63d; }
-    #textHeroCall .call div:nth-child(3) a {
-      background: #c7a800; }
-    #textHeroCall .call div:nth-child(4) a {
-      background: #c35dcd; }
-    #textHeroCall .call div:first-child:nth-last-child(2) a, #textHeroCall .call div:first-child:nth-last-child(2) ~ div a {
-      height: 164px;
-      font-size: 1.275em; }
-    #textHeroCall .call div:first-child:nth-last-child(3) a, #textHeroCall .call div:first-child:nth-last-child(3) ~ div a {
-      height: 105px;
-      font-size: 1.025em; }
-    #textHeroCall .call div:first-child:nth-last-child(4) a, #textHeroCall .call div:first-child:nth-last-child(4) ~ div a {
-      height: 75px;
-      font-size: 0.95em; }
+          font-size: .9em;
+          font-weight: 300; }
 
-@media (min-width: 768px) {
-  #leadContent1 h1 {
-    margin-bottom: 40px; } }
 #videoModal {
   z-index: 10002; }
   #videoModal .modal-content {

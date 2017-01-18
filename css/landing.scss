@@ -1,3 +1,11 @@
+$min-sm : '@media (min-width: 544px)';
+$min-md : '@media (min-width: 768px)';
+$min-lg : '@media (min-width: 992px)';
+$min-xl : '@media (min-width: 1200px)';
+
+$just-md : '(min-width: 768px) and (max-width: 992px)';
+$just-lg : '(min-width: 992px) and (max-width: 1200px)';
+
 #secondaryNav {
     background: #000;
 
@@ -35,6 +43,15 @@
 
     li {
         margin-top: 4px;
+
+        @media (min-width: 544px) {
+            width: 49%;
+            float: left;
+
+            &:nth-child(even) {
+                margin-left: 4px;
+            }
+        }
     }
     a {
         background: #d5dfe3;
@@ -52,7 +69,7 @@
     .nav {
         margin-top: 3em;
 
-        @media (min-width:1200px) {
+        @media (min-width: 1200px) {
             margin-top: 2.25em;
         }
 
@@ -72,16 +89,6 @@
     }
 }
 
-@media (min-width: 544px) {
-    #secondaryNav-xs li {
-        width: 49%;
-        float: left;
-
-        &:nth-child(even) {
-            margin-left: 4px;
-        }
-    }
-}
 
 #skinnyGroup {
     background: #eee;
@@ -93,15 +100,15 @@
     }
 }
 
-
 #leadGroup,
 #leadContent1,
 #leadContent2 {
     h1 {
         font-weight: 800;
-    }
-    p {
-        //max-width: 580px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 40px;
+        }
     }
 }
 
@@ -132,21 +139,21 @@
             margin-top: 0em;
         }
         img {
-            width:100%;
-            height:auto;
+            width: 100%;
+            height: auto;
         }
         span {
             display: block;
-            padding:1em 3em 1em 1em;
+            padding: 1em 3em 1em 1em;
             background: #eee;
-            font-weight:600;
-            width:100%;
+            font-weight: 600;
+            width: 100%;
 
             @media (min-width: 768px) {
-                position:absolute;
-                bottom:0px;
-                margin-bottom:-1px;
-                padding:1em 3em 1em 1em;
+                position: absolute;
+                bottom: 0px;
+                margin-bottom: -1px;
+                padding: 1em 3em 1em 1em;
                 background: rgba(255,255,255,.75);
             }
         }
@@ -164,13 +171,39 @@
             margin-bottom: 1.25em;
             position: relative;
             font-size: .95em;
+            float: left;
+            width: calc(50% - 15px);
 
             @media (min-width: 992px) and (max-width: 1200px) {
                 height: initial !important;
             }      
-      
             @media (min-width: 1200px) {
-                padding: .75em 2em .75em .5em;
+                padding: .75em 1.85em .75em .5em;
+                width: 100%;
+            }
+            @mixin single($position, $color) {
+                &:nth-child(#{$position}) {
+                    background: $color;
+                }
+            }
+            @mixin group($qty, $height, $fontSize) {
+                &:first-child:nth-last-child(#{$qty}),
+                &:first-child:nth-last-child(#{$qty}) ~ a {
+                  height: $height;
+                  font-size: $fontSize;
+                }
+            }        
+
+            @include single(2, #a6c63d);
+            @include single(3, #c7a800);
+            @include single(4, #c35dcd);
+
+            @include group(2, 164px, 1.275em);
+            @include group(3, 105px, 1.025em);
+            @include group(4, 75px, .95em);
+
+            &:nth-child(odd) {
+                margin-right: 30px;
             }
             &:after,
             &:before {
@@ -218,41 +251,11 @@
                 }
                 &:last-child {
                     font-size: .9em;
+                    font-weight: 300;
                 }
             }
-
-        }
-        div {
-            @mixin callColor($position, $color) {
-                &:nth-child(#{$position}) a {
-                    background: $color;
-                }
-            }
-
-            @mixin callGroup($qty, $height, $fontSize) {
-                &:first-child:nth-last-child(#{$qty}) a,
-                &:first-child:nth-last-child(#{$qty}) ~ div a {
-                  height: $height;
-                  font-size: $fontSize;
-                }
-            }        
-
-            @include callColor(2, #a6c63d);
-            @include callColor(3, #c7a800);
-            @include callColor(4, #c35dcd);
-
-            @include callGroup(2, 164px, 1.275em);
-            @include callGroup(3, 105px, 1.025em);
-            @include callGroup(4, 75px, .95em);
         }
 
-    }
-}
-
-
-@media (min-width: 768px) {
-    #leadContent1 h1 {
-        margin-bottom: 40px;
     }
 }
 
@@ -291,9 +294,6 @@
     z-index:10001;
     opacity:.9;
 }
-
-
-
 
 
 /*Sliders */
