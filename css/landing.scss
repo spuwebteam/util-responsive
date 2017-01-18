@@ -105,10 +105,6 @@
     }
 }
 
-#textHero {
-
-}
-
 #textHeroCall {
     margin-top: 2.25em;
 
@@ -125,8 +121,8 @@
         a {
             color: #286ee5;
         }
-        @media (min-width:1200px) {
-            font-size:.95em;
+        @media (min-width: 1200px) {
+            font-size: .95em;
         }
     }
     .hero {
@@ -158,45 +154,44 @@
     .call {
         margin-top: 2em;
 
-        @media (min-width:1200px) {
+        @media (min-width: 1200px) {
             margin-top: 0;
         }
         a {
             background: #03bcf4;
             display: block;
             padding: .75em 2em .75em 1em;
-            height: 75px;
             margin-bottom: 1.25em;
             position: relative;
             font-size: .95em;
 
-            @media (min-width:992px) and (max-width:1200px) {
+            @media (min-width: 992px) and (max-width: 1200px) {
                 height: initial !important;
             }      
       
-            @media (min-width:1200px) {
+            @media (min-width: 1200px) {
                 padding: .75em 2em .75em .5em;
             }
             &:after,
             &:before {
-                position:absolute;
-                right:0;
-                height:100%;
-                width:1.25em;
-                z-index:1;
+                position: absolute;
+                right: 0;
+                height: 100%;
+                width: 1.25em;
+                z-index: 1;
             }
             &:after {
-                top:50%;
-                margin-top:-.75em;
+                top: 50%;
+                margin-top: -.75em;
                 font-family: 'fontAwesome';
-                content:'\f054';
-                color:#fff;
+                content: '\f054';
+                color: #fff;
                 text-align: center;
             }
             &:before {
-                top:0;
-                content:'';
-                background:rgba(0,0,0,.35);
+                top: 0;
+                content: '';
+                background: rgba(0,0,0,.35);
             }
             &:hover {
                 background: #000 !important;
@@ -213,7 +208,7 @@
                 width: 100%;
                 color: #000;
 
-                @media (min-width:1200px) {
+                @media (min-width: 1200px) {
                     text-align: right;
                 }
                 &:first-child {
@@ -228,26 +223,26 @@
 
         }
         div {
-            @mixin callColor($number, $color) {
-                &:nth-child(#{$number}) a {
+            @mixin callColor($position, $color) {
+                &:nth-child(#{$position}) a {
                     background: $color;
                 }
             }
-            
+
+            @mixin callGroup($qty, $height, $fontSize) {
+                &:first-child:nth-last-child(#{$qty}) a,
+                &:first-child:nth-last-child(#{$qty}) ~ div a {
+                  height: $height;
+                  font-size: $fontSize;
+                }
+            }        
+
             @include callColor(2, #a6c63d);
             @include callColor(3, #c7a800);
             @include callColor(4, #c35dcd);
 
-            @mixin callGroup($number, $height, $fontsize) {
-                &:first-child:nth-last-child(#{$number}) a,
-                &:first-child:nth-last-child(#{$number}) ~ div a {
-                  height: $height;
-                  font-size: $fontsize;
-                }
-            }
-
-            @include callGroup(2, 167px, 1.275em);
-            @include callGroup(3, 106px, 1.025em);
+            @include callGroup(2, 164px, 1.275em);
+            @include callGroup(3, 105px, 1.025em);
             @include callGroup(4, 75px, .95em);
         }
 
