@@ -1,3 +1,11 @@
+$min-sm : '@media (min-width: 544px)';
+$min-md : '@media (min-width: 768px)';
+$min-lg : '@media (min-width: 992px)';
+$min-xl : '@media (min-width: 1200px)';
+
+$just-md : '(min-width: 768px) and (max-width: 992px)';
+$just-lg : '(min-width: 992px) and (max-width: 1200px)';
+
 #secondaryNav {
     background: #000;
 
@@ -35,6 +43,15 @@
 
     li {
         margin-top: 4px;
+
+        @media (min-width: 544px) {
+            width: 49%;
+            float: left;
+
+            &:nth-child(even) {
+                margin-left: 4px;
+            }
+        }
     }
     a {
         background: #d5dfe3;
@@ -47,32 +64,198 @@
     }
 }
 
-@media(min-width: 544px) {
-    #secondaryNav-xs li {
-        width: 49%;
-        float: left;
+.tertiaryNav {
 
-        &:nth-child(even) {
-            margin-left: 4px;
+    .nav {
+        margin-top: 3em;
+
+        @media (min-width: 1200px) {
+            margin-top: 2.25em;
+        }
+
+        a {
+            background: #286ee5;
+            color: #fff;
+            margin-bottom: 1px;
+            border-left: 15px solid  #1d3aed;
+            text-transform: uppercase;
+            font-size: .9em;
+            padding: 1.45em 1em 1.3em 1em;
+
+            &:hover {
+                background: #000;
+            }
         }
     }
 }
 
+
+#skinnyGroup {
+    background: #eee;
+
+    h1{
+        font-weight: 600;
+        font-size: 1.45em;
+        margin: .85em 0em;
+    }
+}
 
 #leadGroup,
 #leadContent1,
 #leadContent2 {
     h1 {
         font-weight: 800;
-    }
-    p {
-        //max-width: 580px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 40px;
+        }
     }
 }
 
-@media(min-width: 768px) {
-    #leadContent1 h1 {
-        margin-bottom: 40px;
+#textHeroCall {
+    margin-top: 2.25em;
+
+    .text {
+        h2 {
+            margin-top: 0px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        h3 {
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        a {
+            color: #286ee5;
+        }
+        @media (min-width: 1200px) {
+            font-size: .95em;
+        }
+    }
+    .hero {
+        margin-top: 1.5em;
+
+        @media (min-width: 768px) {
+            margin-top: 0em;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        span {
+            display: block;
+            padding: 1em 3em 1em 1em;
+            background: #eee;
+            font-weight: 600;
+            width: 100%;
+
+            @media (min-width: 768px) {
+                position: absolute;
+                bottom: 0px;
+                margin-bottom: -1px;
+                padding: 1em 3em 1em 1em;
+                background: rgba(255,255,255,.75);
+            }
+        }
+    }
+    .call {
+        margin-top: 2em;
+
+        @media (min-width: 1200px) {
+            margin-top: 0;
+        }
+        a {
+            background: #03bcf4;
+            display: block;
+            padding: .75em 2em .75em 1em;
+            margin-bottom: 1.25em;
+            position: relative;
+            font-size: .95em;
+            float: left;
+            width: calc(50% - 15px);
+
+            @media (min-width: 992px) and (max-width: 1200px) {
+                height: initial !important;
+            }      
+            @media (min-width: 1200px) {
+                padding: .75em 1.85em .75em .5em;
+                width: 100%;
+            }
+            @mixin single($position, $color) {
+                &:nth-child(#{$position}) {
+                    background: $color;
+                }
+            }
+            @mixin group($qty, $height, $fontSize) {
+                &:first-child:nth-last-child(#{$qty}),
+                &:first-child:nth-last-child(#{$qty}) ~ a {
+                  height: $height;
+                  font-size: $fontSize;
+                }
+            }        
+
+            @include single(2, #a6c63d);
+            @include single(3, #c7a800);
+            @include single(4, #c35dcd);
+
+            @include group(2, 164px, 1.275em);
+            @include group(3, 105px, 1.025em);
+            @include group(4, 75px, .95em);
+
+            &:nth-child(odd) {
+                margin-right: 30px;
+            }
+            &:after,
+            &:before {
+                position: absolute;
+                right: 0;
+                height: 100%;
+                width: 1.25em;
+                z-index: 1;
+            }
+            &:after {
+                top: 50%;
+                margin-top: -.75em;
+                font-family: 'fontAwesome';
+                content: '\f054';
+                color: #fff;
+                text-align: center;
+            }
+            &:before {
+                top: 0;
+                content: '';
+                background: rgba(0,0,0,.35);
+            }
+            &:hover {
+                background: #000 !important;
+
+                * {
+                    color: #fff !important;
+                }
+                &:before{
+                    background: #555;
+                }
+            }
+            span {
+                display: inline-block;
+                width: 100%;
+                color: #000;
+
+                @media (min-width: 1200px) {
+                    text-align: right;
+                }
+                &:first-child {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    line-height: 1.2em;
+                }
+                &:last-child {
+                    font-size: .9em;
+                    font-weight: 300;
+                }
+            }
+        }
+
     }
 }
 
@@ -111,9 +294,6 @@
     z-index:10001;
     opacity:.9;
 }
-
-
-
 
 
 /*Sliders */

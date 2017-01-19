@@ -1,0 +1,373 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script type="text/javascript">
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>');
+        </script>
+        <script src="js/vendor/bootstrap.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="https://cdn.optimizely.com/js/6109641258.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-32574490-1','seattle.gov');
+            ga('create', 'UA-42479108-1','seattle.gov', {'name': 'rollup'}); 
+            ga('send', 'pageview');  // spu
+            ga('rollup.send', 'pageview');  // Send pageview to rollup tracker.
+        </script>
+        <!--[if lt IE 9]>
+            <script src="http://seattle.gov/util/html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="http://seattle.gov/utils/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="govHeader">
+            <div class="container">
+                <div class="row">
+                    <!--#include virtual="/common/seattleHeader_960.inc"-->
+                    <script>
+                        $(document).ready(function() {
+                            //seattle.gov department search
+                            try {
+                                    whichDept = "SPU";  //this var is used to pass a unique department identifier to the Google search toggle 
+                                    whichStyle = "spu_frontend";
+                                    //document.forms[1].searchToggle[1].checked = true; //Change search toggle default to 'This Department'
+                                    $('#deptCollection').prop('checked', true);
+                                    changeFilter('Dept');
+                                } catch (e) {
+                            }
+                        });
+
+                        
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div id="deptHeader">
+            <div class="container">
+                <div class="row">
+                    <div id="director" class="col-sm-5">
+                        <h1>Seattle Public Utilities</h1>
+                        <h4 class="hidden-sm hidden-xs">Mami Hara, Director</h4>
+                    </div>
+                    <div  id="primaryNav" class="col-sm-7">
+                        <ul class="caps pull-right">
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices">Services</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/EnvironmentConservation">Environment & Conservation</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/Engineering/DevelopmentServicesOffice">Construction & Development</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/ForBusinesses">Businesses & Key Accounts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="container">
+                <div class="row">
+                    <div id="ebill" class="col-lg-3 col-md-10">
+                        <div id="signup">
+                            <h1>EBilling</h1>
+                            <p>Pay your SPU and your City Light bills, view activity,
+                            edit your profile or add and delete accounts.</p>
+                            <p><a href="https://secure8.i-doxs.net/SeattleUtilities/Enroll.aspx" target="_blank" class="caps">Sign up</a></p>
+                        </div>
+                        <div id="pay">
+                            <a href="https://secure8.i-doxs.net/SeattleUtilities/default.aspx" target="_blank" class="caps">Pay my bill &gt;</a>
+                        </div>
+                    </div>
+                    <!-- <div id="alert" class="col-lg-3 col-md-10">
+                        <div id="redbox">
+                            <h5>Customer Service Calls</h5>
+                            <p>
+                                You may experience longer than normal wait times while we transition to our new <a href="http://www.seattle.gov/util/NewBillingSystem/index.htm">customer information and billing system.</a>
+                            </p>
+                            <h5>Closed Account Bills</h5>
+                            <p>
+                                My account is closed. <a href="http://www.seattle.gov/util/MyServices/MyAccount/PaymentsandBills/index.htm">Why have I received a bill?</a>
+                            </p>
+                        </div>
+                        <div id="pay">
+                            <a href="https://secure8.i-doxs.net/SeattleUtilities/default.aspx" target="_blank" class="caps">Pay my bill &gt;</a>
+                        </div>
+                        <div id="signup" class="caps">
+                            <a href="https://secure8.i-doxs.net/SeattleUtilities/Enroll.aspx">Sign Up for eBilling</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="row">
+                    <div id="navbar">
+                        <ul class="caps" id="services">
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/Recycling">Recycling</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/Garbage">Garbage</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/FoodYard">Food & Yard</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/Water">Water</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/DrainageSewer">Drainage & Sewer</a>
+                            </li>
+                            <li>
+                               <a href="http://www.seattle.gov/util/MyServices/Rates">Rates</a>
+                            </li>
+                        </ul>
+                        <ul class="caps" id="trans">
+                            <li id="navAcct">
+                                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account, Moving, Billing</a>
+                                    <ul id="acctDrop" class="dropdown-menu" aria-labelledby="navAcct">
+                                        <li>
+                                            <a href="https://secure8.i-doxs.net/SeattleUtilities/default.aspx" target="_blank">Single payment</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/MyAccount/index.htm">All payment options</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/MyAccount/PaymentsandBills/LoginSignupPaperlessBilling/FAQsPaperlessBilling/index.htm">Online payment basics</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/MyAccount/MyBillSeemsTooHigh/index.htm">Billing problems</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/MyAccount/PaymentsandBills/Walk-inPaymentLocations/index.htm">Walk-in payment locations</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/MyAccount/GetHelpwithUtilityBill/index.htm">Help paying my bill</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/Recycling/LookUpCollectionDay/index.htm">Look up collection day</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/Garbage/HouseResidentsGarbage/ExtraorBulkyGarbage/index.htm">Extra or bulky garbage</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/Garbage/DumpTransferStation/index.htm">Dump hours & locations</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/MyAccount/Moving_Change_Your_Account/NewCustomerRequirements/index.htm">New customer information</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/MyAccount/Moving_Change_Your_Account/index.htm">Start/stop service</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.seattle.gov/util/MyServices/Garbage/ChangeBinSize/index.htm">Change bin size</a>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li id="navReport">
+                                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report Problems</a>
+                                <ul id="reportDrop" class="dropdown-menu" aria-labelledby="navReport">
+                                    <li>
+                                        <a href="http://www.seattle.gov/util/MyServices/Garbage/ReportMissedCollection/index.htm">Report missed collection</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.seattle.gov/util/MyServices/Garbage/MissingorDamagedBin/index.htm">Missing or damaged bin</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.seattle.gov/util/EnvironmentConservation/OurCity/ReportPollution/index.htm">Report pollution</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www2.seattle.gov/util/forms/pluggedDrain/">Report a plugged storm drain</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://seattle-csrprodcwi.motorolasolutions.com/ServiceRequest.mvc/SRIntakeStep2?id=PUGRAFFI" target="_blank">Report graffiti</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://seattle-csrprodcwi.motorolasolutions.com/ServiceRequest.mvc/SRIntakeStep2?id=PUILDUMP" target="_blank">Report illegal dumping</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="navRid" >
+                                <a href="http://www.seattle.gov/util/MyServices/LookItUpWhatsAccepted/index.htm">How do I get rid of this?</a>
+                            </li>
+                            <li id="navPick">
+                                <a href="http://www.seattle.gov/util/MyServices/Recycling/LookUpCollectionDay/index.htm">What's my pickup day</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="promo">
+            <div class="container">
+                <div class="row" id="promo">
+                <div class="col-sm-4">
+                    <a href="http://www.seattle.gov/util/MyServices/Water/AbouttheWaterSystem/WaterSystemOverview/index.htm">
+                        <img src="img/promo1.jpg" />
+                        <h4>Where does our water come from?</h4>
+                        <p class="hidden-sm hidden-xs">
+                            Seattle's water comes from two regional mountain watersheds. We protect our watersheds and monitor our supply to give you fresh, safe drinking water.
+                        </p>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="http://www.seattle.gov/util/MyServices/DrainageSewer/StormsFlooding/StormSeasonPreparation/TipstoReduceFlooding/index.htm">
+                        <img src="img/promo2.jpg" />
+                        <h4>Help us reduce flooding</h4>
+                        <p class="hidden-sm hidden-xs">
+                            Our drainage crews work hard to maintain the city’s drainage infrastructure, including storm drains on streets. But with many drains spread across the city, we need your help, too.
+                        </p>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="http://www.seattle.gov/util/MyServices/Garbage/HouseResidentsGarbage/ExtraorBulkyGarbage">
+                        <img src="img/promo3.jpg" />
+                        <h4>Save yourself a trip to the dump</h4>
+                        <p class="hidden-sm hidden-xs">
+                            For a fee, we can pick up your bulky items, like mattresses, appliances and electronics.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h4 class="caps">Seattle Public Utilities</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="branding" class="col-lg-3">
+                        <div class="col-lg-4">
+                            <img src="http://www.seattle.gov/images/2015_IMG/logoHome.png" />
+                        </div>
+                        <div id="address" class="col-lg-8">
+                            700 5th Ave.<br />
+                            P.O. Box 34018<br />
+                            Seattle, WA<br />
+                            98124-4018<br />
+                            (206) 684-3000
+                        </div>
+                        <div id="socialMedia">
+                            <p><a href="mailto:webteam.spu@seattle.gov">Website Feedback</a></p>
+                            <a href="http://www.youtube.com/SeattleUtilities" target="_blank"><img alt="youTube" src="http://seattle.gov/util/cs/groups/public/@spu/documents/webproductionfile/3_036022.png"></a>                 
+                            <a href="http://atyourservice.seattle.gov/feed/" target="_blank"><img alt="rss" src="http://seattle.gov/util/cs/groups/public/@spu/documents/webproductionfile/3_036024.png"></a>
+                            <a href="http://twitter.com/seattlespu" target="_blank"><img alt="twitter" src="http://seattle.gov/util/cs/groups/public/@spu/documents/webproductionfile/3_036027.png"></a>
+                            <a href="http://www.facebook.com/SeattlePublicUtilities" target="_blank"><img alt="facebook" src="http://seattle.gov/util/cs/groups/public/@spu/documents/webproductionfile/3_036023.png"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul>
+                            <li>
+                                <h5 class="caps">Pay My Bill</h5>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://secure8.i-doxs.net/SeattleUtilities/default.aspx">Single Payment</a>
+                            </li>
+                            <li>
+                                <a href="https://secure8.i-doxs.net/SeattleUtilities/default.aspx">Login to eBilling</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://secure8.i-doxs.net/SeattleUtilities/Enroll.aspx">Sign Up for eBilling</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/MyAccount/GetHelpwithUtilityBill/index.htm">Get Help Paying a Bill</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/MyAccount/MyBillSeemsTooHigh/index.htm">Billing Problems</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/MyAccount/index.htm">All Payment Options</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul>
+                            <li>
+                                <h5 class="caps">My Account</h5>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/Garbage/ReportMissedCollection/index.htm">Report Missed Pickup</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/Recycling/LookUpCollectionDay/index.htm">Look Up Pickup Day</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/index.htm">Print Pickup Calendar</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/Garbage/DumpTransferStation/index.htm">Dump Hours & Locations</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/index.htm">Start/Stop Service</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/Garbage/ChangeBinSize/index.htm">Change Bin Size</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/MyServices/Garbage/MissingorDamagedBin/index.htm">Missing or Damaged Bin</a>
+                            </li>
+                            <li>
+                                <a href="https://seattle-csrprodcwi.motorolasolutions.com/ServiceRequest.mvc/SRIntakeStep2?id=PUGRAFFI">Report Graffiti</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/EnvironmentConservation/OurCity/ReportPollution/index.htm">Report Pollution</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://seattle-csrprodcwi.motorolasolutions.com/ServiceRequest.mvc/SRIntakeStep2?id=PUILDUMP">Report Illegal Dumping</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul>
+                            <li>
+                                <h5 class="caps">About Us</h5>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/AboutUs/Management/Director/StrategicBusinessPlan/index.htm">Strategic Business Plan</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/AboutUs/index.htm">About</a>
+                            </li>
+                            <li>
+                                <a href="http://atyourservice.seattle.gov/">News Blog</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/Documents/index.htm">Documents</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/AboutUs/Careers/index.htm">Careers</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/HelpFAQs/index.htm">Help</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/AboutUs/ContactUs/index.htm">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
