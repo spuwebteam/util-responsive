@@ -477,7 +477,8 @@
     #footer ul {
       margin-top: 0; }
     #footer #address {
-      margin-left: 0; }
+      margin-left: 0; 
+      padding-bottom: 1em}
     #footer #socialMedia {
       margin-top: 14em; }
     #footer li a {
