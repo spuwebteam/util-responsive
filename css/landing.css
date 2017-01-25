@@ -62,14 +62,15 @@
     margin: .85em 0em; }
 
 #leadGroup h1,
-#leadContent1 h1,
-#leadContent2 h1 {
+.leadContent h1 {
   font-weight: 800; }
   @media (min-width: 768px) {
     #leadGroup h1,
-    #leadContent1 h1,
-    #leadContent2 h1 {
+    .leadContent h1 {
       margin-bottom: 40px; } }
+
+.regularContent h1, .regularContent h2 {
+  font-weight: 600; }
 
 #textHeroCall {
   margin-top: 2.25em; }

@@ -102,8 +102,7 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
 }
 
 #leadGroup,
-#leadContent1,
-#leadContent2 {
+.leadContent {
     h1 {
         font-weight: 800;
 
@@ -112,6 +111,13 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
         }
     }
 }
+
+.regularContent {
+    h1, h2 {
+        font-weight: 600;
+    }
+}
+
 
 #textHeroCall {
     margin-top: 2.25em;
