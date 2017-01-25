@@ -147,6 +147,25 @@
   .promo a > p {
     color: #000; }
 
+#sbp-promo {
+  padding-top: 3em; }
+  #sbp-promo img {
+    width: 100%;
+    height: auto; }
+  #sbp-promo .item {
+    margin-top: .9em; }
+    #sbp-promo .item h4 {
+      font-size: 125%; }
+  #sbp-promo h4 {
+    color: #4585f2; }
+  #sbp-promo a {
+    display: block; }
+    #sbp-promo a:hover {
+      text-decoration: none;
+      opacity: .85; }
+    #sbp-promo a > p {
+      color: #000; }
+
 #footer {
   margin-top: 1.5em;
   background-color: #2b2b2b;
