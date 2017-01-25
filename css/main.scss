@@ -54,6 +54,21 @@
         margin-top: 5px;
         font-family: 'Seattle Text', 'Open Sans', 'Arial';
     }
+    .visible-xs .col-xs-4 {
+        a {
+            position: absolute;
+            
+            &:first-child {
+                right: 75px;
+            }
+            &:last-child {
+                right: 15px;
+            }
+        }
+    }
+    #hamMenuLink{
+        margin:0px 9px 0px 20px;
+    }
     #navIcons {
         font-size: 2em;
         color: #fff;
@@ -560,8 +575,29 @@
             margin-top: -3em;
         }
     }
-    #footer li {
-        border: none;
+    #footer { 
+        margin-top: 6em;
+        font-size: 100%;
+
+        ul {
+            margin-top: 0;
+        }
+        li {
+            border: none;
+
+            a {
+                padding-left: 0;
+            }
+        }
+        #address {
+            margin-left: 0;
+        }
+        #socialMedia {
+            margin-top: 14em;
+        }
+        #gTranslate {
+            margin-left:0px;
+        }
     }
     .footerCat:last-child li:last-child {
         padding: 5.25em 0em;
@@ -616,25 +652,6 @@
         #navbar #services {
             width: auto;
             margin: 0;
-        }
-    }
-    #footer {
-        margin-top: 6em;
-        font-size: 100%;
-        ul {
-            margin-top: 0;
-        }
-        #address {
-            margin-left: 0;
-        }
-        #socialMedia {
-            margin-top: 14em;
-        }
-        li a {
-            padding-left: 0;
-        }
-        #gTranslate {
-            margin-left:0px;
         }
     }
     #promo .item,

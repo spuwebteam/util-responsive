@@ -82,7 +82,8 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
             font-size: .9em;
             padding: 1.45em 1em 1.3em 1em;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 background: #000;
             }
         }
