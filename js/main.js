@@ -10,7 +10,8 @@ $(document).ready(function() {
         $('#hamNav > li').not('.dismiss').find('a > i').attr('class', down);
     };
 
-    $('#hamNav > li > a').not('.dismiss a').append('<i class="fa fa-chevron-down pull-right"></i>');
+    $('#hamNav > li > a').not('.dismiss a, .noChildren a')
+        .append('<i class="fa fa-chevron-down pull-right"></i>');
 
     $('#hamMenuLink').on('click', function(e) {
         e.preventDefault();
@@ -18,7 +19,7 @@ $(document).ready(function() {
         $(this).toggle();
     });
 
-    $('#hamNav > li > a').on('click', function(e) {
+    $('#hamNav > li > a').not('.dismiss a, .noChildren a').on('click', function(e) {
         var $i = $(this).find('i');
 
         e.preventDefault();
@@ -45,6 +46,16 @@ $(document).ready(function() {
             closeNav(e);
         }
     });
+
+    if ($('#navbar').length === 0) {
+        var $hamNavHome = $(
+                '<li class="noChildren">' +
+                    '<a href="http://www.seattle.gov/util/abtest/home/r/">Home</a>' +
+                '</li>'
+            );
+
+        $hamNavHome.insertAfter($('#hamNav > li:first-child'));
+    }
 
     //XS Nav Accordion ------------------------------/
     $('#nav-xs ul > li > a').on('click', function(e) {

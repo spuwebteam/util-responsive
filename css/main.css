@@ -43,6 +43,14 @@
     color: #fff;
     margin-top: 5px;
     font-family: 'Seattle Text', 'Open Sans', 'Arial'; }
+  #deptHeader .visible-xs .col-xs-4 a {
+    position: absolute; }
+    #deptHeader .visible-xs .col-xs-4 a:first-child {
+      right: 75px; }
+    #deptHeader .visible-xs .col-xs-4 a:last-child {
+      right: 15px; }
+  #deptHeader #hamMenuLink {
+    margin: 0px 9px 0px 20px; }
   #deptHeader #navIcons {
     font-size: 2em;
     color: #fff; }
@@ -444,8 +452,21 @@
     float: right;
     margin-top: -3em; }
 
-  #footer li {
-    border: none; }
+  #footer {
+    margin-top: 6em;
+    font-size: 100%; }
+    #footer ul {
+      margin-top: 0; }
+    #footer li {
+      border: none; }
+      #footer li a {
+        padding-left: 0; }
+    #footer #address {
+      margin-left: 0; }
+    #footer #socialMedia {
+      margin-top: 14em; }
+    #footer #gTranslate {
+      margin-left: 0px; }
 
   .footerCat:last-child li:last-child {
     padding: 5.25em 0em; } }
@@ -489,20 +510,6 @@
   #main #navbar #services {
     width: auto;
     margin: 0; }
-
-  #footer {
-    margin-top: 6em;
-    font-size: 100%; }
-    #footer ul {
-      margin-top: 0; }
-    #footer #address {
-      margin-left: 0; }
-    #footer #socialMedia {
-      margin-top: 14em; }
-    #footer li a {
-      padding-left: 0; }
-    #footer #gTranslate {
-      margin-left: 0px; }
 
   #promo .item,
   .promo .item {
