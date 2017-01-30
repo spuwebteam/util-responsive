@@ -25,12 +25,6 @@
   margin-bottom: 10px; }
   #secondaryNav-xs li {
     margin-top: 4px; }
-    @media (min-width: 544px) {
-      #secondaryNav-xs li {
-        width: 49%;
-        float: left; }
-        #secondaryNav-xs li:nth-child(even) {
-          margin-left: 4px; } }
   #secondaryNav-xs a {
     background: #d5dfe3;
     color: #000;
@@ -40,9 +34,6 @@
 
 .tertiaryNav .nav {
   margin-top: 3em; }
-  @media (min-width: 1200px) {
-    .tertiaryNav .nav {
-      margin-top: 2.25em; } }
   .tertiaryNav .nav a {
     background: #286ee5;
     color: #fff;
@@ -64,10 +55,6 @@
 #leadGroup h1,
 .leadContent h1 {
   font-weight: 800; }
-  @media (min-width: 768px) {
-    #leadGroup h1,
-    .leadContent h1 {
-      margin-bottom: 40px; } }
 
 .regularContent h1, .regularContent h2 {
   font-weight: 600; }
@@ -83,14 +70,8 @@
     font-weight: 600; }
   #textHeroCall .text a {
     color: #286ee5; }
-  @media (min-width: 1200px) {
-    #textHeroCall .text {
-      font-size: .95em; } }
   #textHeroCall .hero {
     margin-top: 1.5em; }
-    @media (min-width: 768px) {
-      #textHeroCall .hero {
-        margin-top: 0em; } }
     #textHeroCall .hero img {
       width: 100%;
       height: auto; }
@@ -100,18 +81,8 @@
       background: #eee;
       font-weight: 600;
       width: 100%; }
-      @media (min-width: 768px) {
-        #textHeroCall .hero span {
-          position: absolute;
-          bottom: 0px;
-          margin-bottom: -1px;
-          padding: 1em 3em 1em 1em;
-          background: rgba(255, 255, 255, 0.75); } }
   #textHeroCall .call {
     margin-top: 2em; }
-    @media (min-width: 1200px) {
-      #textHeroCall .call {
-        margin-top: 0; } }
     #textHeroCall .call a {
       background: #03bcf4;
       display: block;
@@ -121,13 +92,6 @@
       font-size: .95em;
       float: left;
       width: calc(50% - 15px); }
-      @media (min-width: 992px) and (max-width: 1200px) {
-        #textHeroCall .call a {
-          height: initial !important; } }
-      @media (min-width: 1200px) {
-        #textHeroCall .call a {
-          padding: .75em 1.85em .75em .5em;
-          width: 100%; } }
       #textHeroCall .call a:nth-child(2) {
         background: #a6c63d; }
       #textHeroCall .call a:nth-child(3) {
@@ -172,9 +136,6 @@
         display: inline-block;
         width: 100%;
         color: #000; }
-        @media (min-width: 1200px) {
-          #textHeroCall .call a span {
-            text-align: right; } }
         #textHeroCall .call a span:first-child {
           text-transform: uppercase;
           font-weight: 600;
@@ -214,50 +175,6 @@
   z-index: 10001;
   opacity: .9; }
 
-/*Sliders */
-.sliderSm .ui-widget-content,
-.sliderSm .ui-widget-header {
-  border: 0px;
-  background: #9CE3F8 !important; }
-
-#sliders input {
-  border: 0;
-  color: #666;
-  font-weight: bold; }
-
-#sliders img {
-  width: 100%;
-  height: auto;
-  margin: 0px auto 5px auto;
-  display: block; }
-
-.sliderSm {
-  border-radius: 3px;
-  background-color: #9CE3F8;
-  margin-bottom: 10px; }
-
-.sliderSm .ui-slider .ui-slider-handle {
-  position: absolute;
-  width: .8em;
-  height: 1.1em;
-  background: #333;
-  border: 0px; }
-
-.sliderSm .ui-slider-horizontal_recycling {
-  height: .6em;
-  width: 53%;
-  margin-left: 23%; }
-
-.sliderSm .ui-slider-horizontal_foodAndYard {
-  height: .6em;
-  width: 70%;
-  margin-left: 15.5%; }
-
-.sliderSm .ui-slider-horizontal_garbage {
-  height: .6em;
-  width: 87.5%;
-  margin-left: 6.75%; }
-
 /*Bootstrap Extension*/
 .row-centered {
   text-align: center; }
@@ -273,8 +190,40 @@
 .clearTop {
   margin-top: 0px !important; }
 
-.jumbotron-light {
-  background-color: #fff;
-  border: 1px solid #ddd; }
+@media (min-width: 544px) {
+  #secondaryNav-xs li {
+    width: 49%;
+    float: left; }
+    #secondaryNav-xs li:nth-child(even) {
+      margin-left: 4px; } }
+@media (min-width: 768px) {
+  #leadGroup h1,
+  .leadContent h1 {
+    margin-bottom: 40px; }
+
+  #textHeroCall .hero {
+    margin-top: 0em; }
+    #textHeroCall .hero span {
+      position: absolute;
+      bottom: 0px;
+      margin-bottom: -1px;
+      padding: 1em 3em 1em 1em;
+      background: rgba(255, 255, 255, 0.75); } }
+@media (min-width: 992px) and (max-width: 1200px) {
+  #textHeroCall .call a {
+    height: initial !important; } }
+@media (min-width: 1200px) {
+  .tertiaryNav .nav {
+    margin-top: 2.25em; }
+
+  #textHeroCall .text {
+    font-size: .95em; }
+  #textHeroCall .call {
+    margin-top: 0; }
+    #textHeroCall .call a {
+      padding: .75em 1.85em .75em .5em;
+      width: 100%; }
+      #textHeroCall .call a span {
+        text-align: right; } }
 
 /*# sourceMappingURL=landing.css.map */
