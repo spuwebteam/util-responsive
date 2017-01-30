@@ -1,7 +1,12 @@
 $(function(){
 
     // Clone Secondary Nav for mobile
-    $('#secondaryNav-xs ul').append($('#secondaryNav li').clone());
+    $('#secondaryNav-xs ul').append(
+        $('#primaryNav > ul > li > a.active')
+        .siblings('ul')
+        .children('li')
+        .clone()
+    );
 
     // Add Video Functionality 
     if($('a.video-modal').length > 0){
