@@ -277,7 +277,7 @@
         margin-bottom: 0; }
       #deptHeader #primaryNav li {
         float: left; }
-      #deptHeader #primaryNav a {
+      #deptHeader #primaryNav > ul > li > a {
         width: 10.857em;
         height: 3.7em;
         padding: .5em .75em .25em 1em;
@@ -286,14 +286,33 @@
         color: #000;
         display: block;
         text-decoration: none; }
-        #deptHeader #primaryNav a:hover, #deptHeader #primaryNav a:active, #deptHeader #primaryNav a.active {
+        #deptHeader #primaryNav > ul > li > a:hover, #deptHeader #primaryNav > ul > li > a:active, #deptHeader #primaryNav > ul > li > a.active {
           background: #ccc; }
-      #deptHeader #primaryNav > ul > li:last-child a {
+      #deptHeader #primaryNav > ul > li:last-child > a {
         width: 10em;
         padding-right: 0; }
-      #deptHeader #primaryNav > ul > li:nth-child(1) a {
+      #deptHeader #primaryNav > ul > li:nth-child(1) > a {
         width: 7.14em;
         border: none; }
+      #deptHeader #primaryNav > ul > li > ul {
+        position: absolute;
+        left: 0px;
+        padding: 0px; }
+        #deptHeader #primaryNav > ul > li > ul li {
+          margin: 0px;
+          padding: 0px; }
+        #deptHeader #primaryNav > ul > li > ul a {
+          color: #fff;
+          padding: 20px 17px;
+          margin: 0px;
+          display: inline-block;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: .85em;
+          text-decoration: none; }
+          #deptHeader #primaryNav > ul > li > ul a:hover, #deptHeader #primaryNav > ul > li > ul a:active, #deptHeader #primaryNav > ul > li > ul a.active {
+            background: #ccc;
+            color: #000; }
 
   #main {
     background-image: url("/cs/groups/public/@spu/documents/document/3_037117.jpg");

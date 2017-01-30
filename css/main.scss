@@ -364,30 +364,57 @@
             li {
                 float: left;
             }
-            a {
-                width: 10.857em;
-                height: 3.7em;
-                padding: .5em .75em .25em 1em;
-                font-weight: 700;
-                border-left: .1em solid #c2c2c2;
-                color: #000;
-                display: block;
-                text-decoration: none;
-
-                &:hover,
-                &:active,
-                &.active{
-                    background:#ccc;
-                }
-            }
             > ul > li {
-                &:last-child a {
+                > a {
+                    width: 10.857em;
+                    height: 3.7em;
+                    padding: .5em .75em .25em 1em;
+                    font-weight: 700;
+                    border-left: .1em solid #c2c2c2;
+                    color: #000;
+                    display: block;
+                    text-decoration: none;
+
+                    &:hover,
+                    &:active,
+                    &.active{
+                        background:#ccc;
+                    }
+                }
+                &:last-child > a {
                     width: 10em;
                     padding-right: 0;
                 }
-                &:nth-child(1) a {
+                &:nth-child(1) > a {
                     width: 7.14em;
                     border: none;
+                }
+            }
+            > ul > li > ul {
+                position: absolute;
+                left: 0px;
+                padding: 0px;
+
+                li {
+                    margin: 0px;
+                    padding: 0px;
+                }
+                a {
+                    color: #fff;
+                    padding: 20px 17px;
+                    margin: 0px;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: .85em;
+                    text-decoration: none;
+
+                    &:hover,
+                    &:active,
+                    &.active {
+                        background: #ccc;
+                        color: #000;
+                    }
                 }
             }
         }
