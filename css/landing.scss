@@ -267,6 +267,10 @@
             margin-bottom: 40px;
         }
     }
+    #leadGroup,
+    #skinnyGroup {
+        border-top: 112px solid #000;
+    }
     #textHeroCall {
         .hero {
             margin-top: 0em;
@@ -316,7 +320,10 @@
             }
         }
     }
-
+    #leadGroup,
+    #skinnyGroup {
+        border-top:56px solid #000;
+    }
 }
 
 

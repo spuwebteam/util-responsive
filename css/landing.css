@@ -201,6 +201,10 @@
   .leadContent h1 {
     margin-bottom: 40px; }
 
+  #leadGroup,
+  #skinnyGroup {
+    border-top: 112px solid #000; }
+
   #textHeroCall .hero {
     margin-top: 0em; }
     #textHeroCall .hero span {
@@ -224,6 +228,10 @@
       padding: .75em 1.85em .75em .5em;
       width: 100%; }
       #textHeroCall .call a span {
-        text-align: right; } }
+        text-align: right; }
+
+  #leadGroup,
+  #skinnyGroup {
+    border-top: 56px solid #000; } }
 
 /*# sourceMappingURL=landing.css.map */
