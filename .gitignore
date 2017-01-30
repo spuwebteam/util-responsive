@@ -49,6 +49,8 @@ Temporary Items
 # Sass 
 .sass-cache
 .sass-cache/*
+/.sass-cache
+/.sass-cache/*
 
 # Sublime Text
 
