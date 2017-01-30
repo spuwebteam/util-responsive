@@ -1,11 +1,3 @@
-$min-sm : '@media (min-width: 544px)';
-$min-md : '@media (min-width: 768px)';
-$min-lg : '@media (min-width: 992px)';
-$min-xl : '@media (min-width: 1200px)';
-
-$just-md : '(min-width: 768px) and (max-width: 992px)';
-$just-lg : '(min-width: 992px) and (max-width: 1200px)';
-
 #secondaryNav {
     background: #000;
 
@@ -37,21 +29,11 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
         }
     }
 }
-
 #secondaryNav-xs {
     margin-bottom: 10px;
 
     li {
         margin-top: 4px;
-
-        @media (min-width: 544px) {
-            width: 49%;
-            float: left;
-
-            &:nth-child(even) {
-                margin-left: 4px;
-            }
-        }
     }
     a {
         background: #d5dfe3;
@@ -63,15 +45,9 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
         }
     }
 }
-
 .tertiaryNav {
-
     .nav {
         margin-top: 3em;
-
-        @media (min-width: 1200px) {
-            margin-top: 2.25em;
-        }
 
         a {
             background: #286ee5;
@@ -89,8 +65,6 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
         }
     }
 }
-
-
 #skinnyGroup {
     background: #eee;
 
@@ -100,25 +74,17 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
         margin: .85em 0em;
     }
 }
-
 #leadGroup,
 .leadContent {
     h1 {
         font-weight: 800;
-
-        @media (min-width: 768px) {
-            margin-bottom: 40px;
-        }
     }
 }
-
 .regularContent {
     h1, h2 {
         font-weight: 600;
     }
 }
-
-
 #textHeroCall {
     margin-top: 2.25em;
 
@@ -135,16 +101,10 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
         a {
             color: #286ee5;
         }
-        @media (min-width: 1200px) {
-            font-size: .95em;
-        }
     }
     .hero {
         margin-top: 1.5em;
 
-        @media (min-width: 768px) {
-            margin-top: 0em;
-        }
         img {
             width: 100%;
             height: auto;
@@ -155,22 +115,11 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
             background: #eee;
             font-weight: 600;
             width: 100%;
-
-            @media (min-width: 768px) {
-                position: absolute;
-                bottom: 0px;
-                margin-bottom: -1px;
-                padding: 1em 3em 1em 1em;
-                background: rgba(255,255,255,.75);
-            }
         }
     }
     .call {
         margin-top: 2em;
 
-        @media (min-width: 1200px) {
-            margin-top: 0;
-        }
         a {
             background: #03bcf4;
             display: block;
@@ -181,13 +130,6 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
             float: left;
             width: calc(50% - 15px);
 
-            @media (min-width: 992px) and (max-width: 1200px) {
-                height: initial !important;
-            }      
-            @media (min-width: 1200px) {
-                padding: .75em 1.85em .75em .5em;
-                width: 100%;
-            }
             @mixin single($position, $color) {
                 &:nth-child(#{$position}) {
                     background: $color;
@@ -248,9 +190,6 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
                 width: 100%;
                 color: #000;
 
-                @media (min-width: 1200px) {
-                    text-align: right;
-                }
                 &:first-child {
                     text-transform: uppercase;
                     font-weight: 600;
@@ -262,11 +201,8 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
                 }
             }
         }
-
     }
 }
-
-
 #videoModal {
     z-index:10002;
 
@@ -280,7 +216,6 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
     .modal-body {
         padding: 0 25px 25px 25px;
     }
-     
     .modal-header {
         padding: 25px 25px 15px 25px;
         text-align: right;
@@ -296,60 +231,10 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
         opacity: 1;
     }
 } 
-
 #videoModal.in + .modal-backdrop {
     z-index:10001;
     opacity:.9;
 }
-
-
-/*Sliders */
-
-.sliderSm .ui-widget-content,
-.sliderSm .ui-widget-header {
-    border: 0px;
-    background:#9CE3F8 !important;
-}
-#sliders input{
-    border: 0;  
-    color:#666;
-    font-weight: bold;
-}
-#sliders img {
-    width:100%;
-    height:auto;
-    margin: 0px auto 5px auto;
-    display:block;
-}
-.sliderSm {
-    border-radius:3px; 
-    background-color:#9CE3F8;
-    margin-bottom:10px;
-}
-.sliderSm .ui-slider .ui-slider-handle {
-    position: absolute;
-    width: .8em;
-    height: 1.1em;
-    background:#333;
-    border:0px;
-}
-.sliderSm .ui-slider-horizontal_recycling {
-    height: .6em;
-    width:53%; 
-    margin-left:23%;
-}
-.sliderSm .ui-slider-horizontal_foodAndYard {
-    height: .6em;
-    width:70%;
-    margin-left:15.5%;
-}
-.sliderSm .ui-slider-horizontal_garbage {
-    height: .6em;
-    width:87.5%;
-    margin-left:6.75%;
-}
-
-
 /*Bootstrap Extension*/
 .row-centered {
   text-align:center;
@@ -363,8 +248,82 @@ $just-lg : '(min-width: 992px) and (max-width: 1200px)';
 .clearTop {
     margin-top:0px !important;
 }
+@media (min-width: 544px) {
+    #secondaryNav-xs {
+        li {
+            width: 49%;
+            float: left;
 
-.jumbotron-light{
-    background-color:#fff;
-    border:1px solid #ddd;
+            &:nth-child(even) {
+                margin-left: 4px;
+            }
+        }
+    }
 }
+@media (min-width: 768px) {
+    #leadGroup,
+    .leadContent {
+        h1 {
+            margin-bottom: 40px;
+        }
+    }
+    #leadGroup,
+    #skinnyGroup {
+        border-top: 112px solid #000;
+    }
+    #textHeroCall {
+        .hero {
+            margin-top: 0em;
+
+            span {
+                position: absolute;
+                bottom: 0px;
+                margin-bottom: -1px;
+                padding: 1em 3em 1em 1em;
+                background: rgba(255,255,255,.75);
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    #textHeroCall {
+        .call {
+            a {
+                height: initial !important;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .tertiaryNav {
+        .nav {
+            margin-top: 2.25em;
+        }
+    }
+    #textHeroCall {
+        .text {
+            font-size: .95em;
+        }
+        .call {
+            margin-top: 0;
+
+            a {   
+                padding: .75em 1.85em .75em .5em;
+                width: 100%;
+
+                span {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    #leadGroup,
+    #skinnyGroup {
+        border-top:56px solid #000;
+    }
+}
+
+
