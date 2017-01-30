@@ -47,10 +47,9 @@ Temporary Items
 .apdisk
 
 # Sass 
-.sass-cache
-.sass-cache/*
-/.sass-cache
-/.sass-cache/*
+css/.sass-cache/*
+css/*.css
+css/*.map
 
 # Sublime Text
 
