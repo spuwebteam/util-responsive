@@ -198,11 +198,43 @@
         }
 
     }
+    .longText{
+        display:none;
+    }
     #alert #redbox {
         padding: 1.5em;
         margin-top: 1em;
         border: 2px solid #e6002e;
         background-color: #fff;
+    }
+    #alert + #ebill {
+        width:50%;
+        position:relative;
+        clear:both;
+        bottom:0px;
+
+        a {
+            font-size: 1.1em;
+        }
+        #pay {
+            float:left;
+            border:0px;
+        }
+    }
+    #alert + #ebill #signup {
+        width:50%;
+        float:right;
+
+        h1,
+        h1 + p {
+            display:none !important;
+        }
+        h1 + p + p {
+            margin:0px;
+            .longText {
+                display:inline;
+            }
+        }
     }
 }
 #textHeroCall {
@@ -686,10 +718,8 @@
             }
         }
         #alert {
-            position: absolute;
-            padding: 0;
-            margin-left: 15px;
-            margin-bottom: -1.5em;
+            margin-top: 2em;
+            margin-bottom: 1em;
             #signup {
                 width: 50%;
                 color: #fff;
