@@ -653,6 +653,7 @@
                 position: absolute;
                 left: 0px;
                 padding: 0px;
+                display:none;
 
                 li {
                     margin: 0px;
@@ -675,6 +676,9 @@
                         color: #000;
                     }
                 }
+            }
+            > ul > li > a.active + ul {
+                display:block;
             }
         }
     }
