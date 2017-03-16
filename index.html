@@ -25,7 +25,10 @@
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
             ga('create', 'UA-32574490-1','seattle.gov');
-            ga('create', 'UA-42479108-1','seattle.gov', {'name': 'rollup'}); 
+            ga('create', 'UA-42479108-1','seattle.gov', {'name': 'rollup'});
+            // Optimizely Universal Analytics Integration
+            window.optimizely = window.optimizely || [];
+            window.optimizely.push("activateUniversalAnalytics");
             ga('send', 'pageview');  // spu
             ga('rollup.send', 'pageview');  // Send pageview to rollup tracker.
         </script>
@@ -424,7 +427,7 @@
                                     P.O. Box 34018<br />
                                     Seattle, WA<br />
                                     98124-4018<br />
-                                    (206) 684-3000
+                                    <a href="tel:206-684-3000" onclick="ga('send', 'event', 'phoneLink', 'click', 'Afooter');">(206) 684-3000</a>
                                 </p>
                             </div>
                         </div>
