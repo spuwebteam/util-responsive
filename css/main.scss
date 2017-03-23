@@ -50,6 +50,10 @@
     h1 {
         font-weight: 700;
         font-family: 'Seattle Text', 'Open Sans', 'Arial';
+        a {
+            text-transform: none;
+            color: #000;
+        }
     }
     h3 {
         color: #fff;
@@ -417,9 +421,7 @@
     a {
         color: #fff;
         padding: .3em 0;
-        &:hover {
-            text-decoration: none;
-        }
+        text-transform: none;
     }
     ul {
         list-style: none;
