@@ -979,19 +979,8 @@
     }
     #deptHeader {
         margin-top: 7em;
-        #primaryNav {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            right: 1em;
-            left: 0;
-            padding-right: 0;
-            margin-left: 0;
-            margin-top: 0;
-        }
         #primaryNav > ul {
             float: right;
-
         }
     }
     .tertiaryNav {
