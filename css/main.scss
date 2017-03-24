@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'aleoregular';
-    src: url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.woff') format('woff'),url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.ttf') format('truetype'),url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.svg#aleobold') format('svg');
-    //src:url('/cs/groups/public/@spu/documents/document/3_037118.eot?#iefix') format('embedded-opentype'),url('/cs/groups/public/@spu/documents/document/3_037121.woff') format('woff'),url('/cs/groups/public/@spu/documents/document/3_037120.ttf') format('truetype'),url('/cs/groups/public/@spu/documents/document/3_037119.svg#aleobold') format('svg');
+    //src: url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.woff') format('woff'),url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.ttf') format('truetype'),url('../fonts/aleo/aleo_regular_macroman/Aleo-Regular-webfont.svg#aleobold') format('svg');
+    src:url('/cs/groups/public/@spu/documents/document/3_037118.eot?#iefix') format('embedded-opentype'),url('/cs/groups/public/@spu/documents/document/3_037121.woff') format('woff'),url('/cs/groups/public/@spu/documents/document/3_037120.ttf') format('truetype'),url('/cs/groups/public/@spu/documents/document/3_037119.svg#aleobold') format('svg');
     font-weight: 400;
     font-style: normal;
 }
@@ -42,9 +42,9 @@
 }
 
 #deptHeader {
-    background-image: url('../img/back_sm.gif');
-    //background-image: url('/cs/groups/public/@spu/documents/document/3_037116.gif');
-    //background-repeat: no-repeat;
+    //background-image: url('../img/back_sm.gif');
+    background-image: url('/cs/groups/public/@spu/documents/document/3_037116.gif');
+    background-repeat: no-repeat;
     background-size: cover;
     padding-top: .75em;
     
@@ -716,8 +716,8 @@
         border-top: 112px solid #000;
     }
     #main {
-        background-image: url('../img/CedarRiverWatershed_Panorama.jpg');
-        //background-image: url('/cs/groups/public/@spu/documents/document/3_037117.jpg');
+        //background-image: url('../img/CedarRiverWatershed_Panorama.jpg');
+        background-image: url('/cs/groups/public/@spu/documents/document/3_037117.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 33.7em;
