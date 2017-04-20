@@ -49,7 +49,8 @@
     padding-top: .75em;
     
     #director {
-        h1 {
+        h2 {
+        	font-size: 36px;
             font-weight: 700;
             font-family: 'Seattle Text', 'Open Sans', 'Arial';
             a {
@@ -623,7 +624,7 @@
         background-image: none;
         position: relative;
         margin-top: 1.5em;
-        h1 {
+        h2 {
             margin-top: -.2em;
             margin-bottom: -.3em;
         }
