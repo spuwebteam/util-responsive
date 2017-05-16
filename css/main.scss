@@ -980,8 +980,10 @@
     }
     #deptHeader {
         margin-top: 5.75em;
-        #primaryNav > ul {
-            float: right;
+        #primaryNav {
+            > ul {
+                float: right;
+            }
         }
     }
     .tertiaryNav {
@@ -1035,6 +1037,33 @@
     }
     #hamNavbar-fixed-top {
         position: static !important;
+    }
+}
+
+// Fixes for old templates
+// Hide secondary topnav layer on orpan landings
+#primaryNav {
+    .nodeHidden {
+        width: 1px !important;
+        height: 1px !important;
+        line-height: 1px !important;
+        background: #fff !important;
+        color: #fff !important;
+        border: 0px !important;
+        float: left;
+    }
+    .active.nodeHidden:only-child {
+        height:36px !important;
+    }
+    .active.nodeHidden:only-child:after {
+        background:#000;
+        content:'';
+        position:absolute;
+        z-index:1000000;
+        width:960px;
+        height:51px;
+        left:0px;
+        top:11px;
     }
 }
 
