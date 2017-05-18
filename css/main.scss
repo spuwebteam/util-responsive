@@ -454,7 +454,7 @@
             margin-left: -200%;
             background: #ddd;
             width: 200%;
-            height: 120%;
+            height: 160%;
             z-index: -1;
         }
         h1 {
@@ -466,12 +466,15 @@
             font-weight: 900;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             line-height: 40px;
-            margin-bottom: 0px;
+            margin-bottom: 20px;
             margin-top: 0px;
 
             @media (min-width: 992px) {
                 display: inline-block;
             }
+        }
+        h1 + h2 {
+            margin-top: 0em;
         }
         h2 {
             margin-top: 1.25em;
@@ -482,11 +485,12 @@
         }
         a {
             color: #286ee5;
-            font-weight: bold;
+            text-decoration: underline;
 
             &:hover {
                 background: #286ee5;
                 color: #fff;
+                text-decoration: none;
             }
         }
         p,
