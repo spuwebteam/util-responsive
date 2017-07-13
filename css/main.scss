@@ -466,11 +466,12 @@
             font-weight: 900;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             line-height: 40px;
-            margin-bottom: 20px;
             margin-top: 0px;
 
-            @media (min-width: 992px) {
-                display: inline-block;
+            &:after {
+                content:'';
+                display:block;
+                margin-bottom:20px;
             }
         }
         h1 + h2 {
