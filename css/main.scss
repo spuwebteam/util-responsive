@@ -270,6 +270,9 @@
         a {
             color: #286ee5;
         }
+        li{
+            margin-bottom:1em;
+        }
     }
     .hero {
         margin-top: 1.5em;
@@ -536,6 +539,11 @@
         #rightCallout {
             border: 2px dotted #cc0000;
         }
+        .alignRight { // Legacy Content Style
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
     }
 #leftNav {
     > .nav {
@@ -580,6 +588,7 @@
         ul {
             list-style: none;
             padding: 0px;
+            
 
             a {
                 background: #fff;
@@ -587,6 +596,8 @@
                 padding-left: 25px;
             }
             ul {
+                display:none;
+
                 a {
                     padding-left: 40px;
                     background: #555;
@@ -608,6 +619,9 @@
                     }
                 }
             } 
+            .active > ul {
+                display:block;
+            }
         }
     }
 }
