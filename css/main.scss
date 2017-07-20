@@ -273,6 +273,9 @@
         li{
             margin-bottom:1em;
         }
+        ul ul {
+            margin-top:10px;
+        }
     }
     .hero {
         margin-top: 1.5em;
@@ -486,6 +489,9 @@
             font-size: 1.3em;
             font-weight: 700;
             height: 30px;
+        }
+        > h2:first-child {
+            margin-top:0px;
         }
         a {
             color: #286ee5;
