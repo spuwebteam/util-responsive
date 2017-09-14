@@ -158,3 +158,7 @@ var loadGTranslate = function() {
         gt.src = 'http://translate.google.com/translate_a/element.js?cb=gtInit';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild(gt);
 }
+
+var newwin = function(URL) {
+    window.open(URL,'SlideRule','width=800,height=750').focus();
+}
