@@ -128,6 +128,25 @@ $(document).ready(function() {
             $('#videoModal').modal();
         });
     }
+
+    //Legacy Accordions
+    $('.accHeader').each(function(){
+        $(this).replaceWith($('<button class="accHeader">' + this.innerHTML + '</button>'));
+    });
+    $('.accHeader').click(function(){
+        var $accBody = $(this).next('.accBody');
+        
+        if ($(this).hasClass('active')){
+            $accBody.slideUp();
+            $(this).removeClass('active');
+        } else {
+            $accBody.slideDown();
+            $(this).addClass('active');
+        }
+    });
+
+    //Hotfix Table styles
+    $('table').addClass('table table-bordered')
 });
 
 var gtInit = function() {
@@ -162,3 +181,4 @@ var loadGTranslate = function() {
 var newwin = function(URL) {
     window.open(URL,'SlideRule','width=800,height=750').focus();
 }
+

@@ -458,6 +458,7 @@
     }
 }
 .content {
+        /*
         &.withNav:before {
             content: '';
             position: absolute;
@@ -466,9 +467,10 @@
             margin-left: -200%;
             background: #ddd;
             width: 200%;
-            height: 160%;
+            height: 120%;
             z-index: -1;
         }
+        */
         h1 {
             display: block;
             background: #fff;
@@ -490,11 +492,11 @@
             margin-top: 0em;
         }
         h2 {
-            margin-top: 1.25em;
-            display: inline-block;
-            font-size: 1.3em;
+            margin-top: .75em;
+            //display: inline-block;
+            //font-size: 1.3em;
+            max-width: 580px;
             font-weight: 700;
-            height: 30px;
         }
         > h2:first-child {
             margin-top:0px;
@@ -510,7 +512,7 @@
             }
         }
         p,
-        ul {
+        ul,ol {
             max-width: 580px;
         }
         li {
@@ -1275,6 +1277,9 @@
         padding: 0px !important;
         float: left;
     }
+    .nodeHidden + ul {
+        margin-top: 52px;
+    }
     .active.nodeHidden:only-child {
         height:36px !important;
     }
@@ -1309,4 +1314,76 @@ a#skipnav {
 // WARP MODAL LAYER FIX
 div.ui-dialog.ui-widget.ui-draggable {
     z-index:10000 !important
+}
+
+// Legacy Fixes (Just copied from old CSS)
+img.alignRight {
+    float:right;
+    margin: 0 0 5px 10px;
+    padding:0 0 0 0;
+}
+img.alignLeft{
+    float:left;
+    margin: 0 10px 5px 0;
+    padding:0 0 0 0;
+}
+
+.accordion {
+    margin-bottom: 5px;
+    max-width: 580px;
+    position: relative;
+
+    .accHeader {
+        display: block;
+        width: 100%;
+        border: 0px;
+        background: transparent;
+        text-align: left;
+        padding:0px;
+
+        h2,h3,h4{
+            border: 1px solid #bbb;
+            border-radius:2px;
+            font-size: 18px;
+            display: block;
+            margin: 0px;
+            padding: 15px;
+            padding-right:30px;
+            position:relative;
+
+            &:hover {
+                border:1px solid #000;
+                background: #000;
+                color: #fff;
+
+            }
+
+            &:after {
+                content:'+';
+                position:absolute;
+                right:15px;
+                font-size:30px;
+                line-height:22px;
+                top:30%;
+            }
+        }
+        &.active {
+            h2,h3,h4 {
+                border:1px solid #000;
+                background: #000;
+                color: #fff;
+
+                &:after {
+                    content: '-';
+                    right: 19px;
+                }
+            }
+        }
+    }
+    .accBody {
+        display: none;
+        border: 1px solid #ccc;
+        margin: -2px 0px;
+        padding: 30px;
+    }
 }
