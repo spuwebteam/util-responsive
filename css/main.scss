@@ -1395,7 +1395,9 @@ img.alignLeft{
 
 //CRW Programs
 div.categories {
-    div {
+    > div {
+        height:auto;
+
         @media (min-width:768px) {
             width:45%;
             margin-right:4%;
@@ -1434,4 +1436,25 @@ div.categories {
         max-width:100%;
         height:auto;
     }
+}
+
+
+//Sliders
+.srGroup #srFrame {
+    box-sizing: content-box;
+}
+
+//Homepage Features
+div.homepageFeature {
+    width: 100px;
+    float: right;
+    margin: 0 5px 0 18px;
+    padding: 0 0 0 0;
+}
+
+div.videoRightWithCaption {
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 10px;
+    width: 240px;
 }
