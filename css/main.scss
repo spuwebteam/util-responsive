@@ -1318,7 +1318,15 @@ div.ui-dialog.ui-widget.ui-draggable {
     z-index:10000 !important
 }
 
-// Legacy Fixes (Just copied from old CSS)
+
+
+
+
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+// BEGIN MESSY LEGACY FIXES
 img.alignRight {
     float:right;
     margin: 0 0 5px 10px;
@@ -1519,5 +1527,133 @@ div.popRock {
 }
 
 
+
+/*DSO process Map*/
+
+#contactWhen{
+max-width:580px;
+margin-bottom:20px;
+}
+
+#contactWhen h3,
+#contactWhen h4  {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#contactWhen .contactBlock{
+  clear:all;
+  position:relative;
+  display:table;  
+  width:100%;
+}
+#contactWhen .contacts{
+  float:right;
+  width:50%;
+  max-width:50%;
+  padding: 10px 0px 0px 0px;
+  display:inline-block;
+}
+#contactWhen .when{
+  width:50%;
+  max-width:50%;
+  min-height:100px;
+  float:left;  
+  position:relative;
+  display:inline-block;
+  margin:0px;
+}
+#contactWhen .when:before{
+  content:'';
+  border-right: 4px solid #b4d1ed;
+  right:5px;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+#contactWhen .colHeader div{
+  width:50%;
+  float:left;
+  padding-bottom:25px;
+  margin:0px !important;
+}
+#contactWhen .colHeader div + div h2{ /* div + div ie8 fix for div:last-child */
+  padding-left:40px;
+}
+#contactWhen .contacts .who{
+  border-top:2px dashed #ccc;
+  padding-left: 40px;
+}
+#contactWhen .contactBlock:last-child .contacts .who{
+  border-bottom:2px dashed #ccc;
+}
+#contactWhen .contacts .who.crew h4{
+  margin-left:15px !important;
+}
+#contactWhen .contacts .who.crew p{
+  margin-left:30px;
+}
+#contactWhen .contacts .who.crew p label{
+  font-weight:bold;
+}
+#contactWhen .when .event{
+  padding-left:0px;
+  padding-bottom:20px;
+}
+#contactWhen .when .event h3{
+  font-style:italic;
+}
+#contactWhen .when .event h3,
+#contactWhen .when .event p{
+  padding:0px !important;
+  margin:0px !important;
+}
+#contactWhen .when .event p:before{
+  content:'';
+  background:#000;
+  width: 15px;
+  height: 15px;
+  position:absolute;
+  margin-top:4px;
+  right:0px;
+  border-radius:50px;
+  border:2px solid #fff;
+}
+
+
+
+
+
+//  SIDE SEWER
+.sideSewer {
+    @media (min-width:561px) {
+        width: 30%;
+        margin-right: 1%;
+        display: inline-block;
+        box-sizing: content-box;
+        vertical-align:top;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+//Video
+.videoLeftWithText {
+    clear: both;
+    margin-top:40px;
+    box-sizing:content-box;
+    width:100%;
+    min-height:200px;
+
+    .videoLeft {
+        float: left;
+        margin-right:20px;
+    }
+}
 
 
