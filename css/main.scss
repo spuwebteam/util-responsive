@@ -1728,3 +1728,40 @@ ul.arrow {
     }
 }
 
+
+// Projects
+.projects {
+    h1, #tabs {
+        max-width:100%;
+    }
+
+    .content {
+        img {
+            max-width:100%;
+            width:100%;
+            height:auto;
+        }
+    }
+    .project-side-info{
+        div {
+            border: 1px solid #ccc;
+            padding: 3% 10% 6%;
+            margin-bottom: 30px;
+        }
+    }
+
+    .photoCaption {
+        display: block;
+        width: 100%;
+        background: #ddd;
+        padding: 10px 15px;
+        margin: 0px;
+        max-width: 100%;
+    }
+
+    .psGroup {
+        max-width: 100%;
+        height: auto;
+        background:transparent;
+    }
+}
