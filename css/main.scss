@@ -1496,6 +1496,12 @@ div.videoRightWithCaption {
 
 // Pop Rock Mobile Fix
 div.popRock {
+    #prControls {
+        width:112px;
+    }
+    #prCaption {
+        bottom:0px;
+    }
     @media (max-width:560px) {
         clear: both;
         width: 100%;
@@ -1519,7 +1525,6 @@ div.popRock {
             right:0px !important;
             left:0px !important;
         }
-
         #prImage {
             position: relative !important;
         }
