@@ -11,7 +11,7 @@ $(document).ready(function() {
     };
 
     $('#hamNav > li > a').not('.dismiss a, .noChildren a')
-        .append('<i class="fa fa-chevron-down pull-right"></i>');
+        .append('<span class="fa fa-chevron-down pull-right"></span>');
 
     $('#hamMenuLink').on('click', function(e) {
         e.preventDefault();
@@ -46,16 +46,6 @@ $(document).ready(function() {
             closeNav(e);
         }
     });
-
-    if ($('#navbar').length === 0) {
-        var $hamNavHome = $(
-                '<li class="noChildren">' +
-                    '<a href="http://www.seattle.gov/util/abtest/home/r/">Home</a>' +
-                '</li>'
-            );
-
-        $hamNavHome.insertAfter($('#hamNav > li:first-child'));
-    }
 
     //XS Nav Accordion ------------------------------/
     $('#nav-xs ul > li > a').on('click', function(e) {
@@ -146,7 +136,28 @@ $(document).ready(function() {
     });
 
     //Hotfix Table styles
-    $('table').addClass('table table-bordered')
+    $('table').addClass('table table-bordered');
+
+    // ADA Fix for Non-distinguishable links
+    // between residential & business links
+    $('#primaryNav, #hamNav').each(function() {
+        var businessSection = $(this).find('a[href*="ForBusinesses"]')[0];
+        var $businessNav = $(businessSection).siblings('ul');
+
+        $businessNav.find('a').each(function(){
+            $(this).attr('title', $(this).text() + ' for Businesses');
+        });
+    });
+
+    // Skip to Navigation
+    $possibleContent = $('div.content, div.regularContent, #textHeroCall div.text');
+
+    if ($possibleContent.length > 0) {
+        var $mainContent = $($possibleContent[0]); 
+        var $skipToMain = $('<a href="#mainContentWrapper" class="sr-only sr-only-focusable" id="skipToMain">Skip to main content</a>');
+        $mainContent.attr('id', 'mainContentWrapper');
+        $('body').prepend($skipToMain);
+    }
 });
 
 var gtInit = function() {
@@ -174,7 +185,7 @@ var loadGTranslate = function() {
     var gt = document.createElement('script');
         gt.type = 'text/javascript';
         gt.async = true;
-        gt.src = 'http://translate.google.com/translate_a/element.js?cb=gtInit';
+        gt.src = 'https://translate.google.com/translate_a/element.js?cb=gtInit';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild(gt);
 }
 
