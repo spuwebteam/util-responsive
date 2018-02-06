@@ -1840,5 +1840,6 @@ table.table.dark-heading th{
         height: 0px;
         float: left;
         overflow: hidden;
+        box-sizing: border-box;
     }
 }
